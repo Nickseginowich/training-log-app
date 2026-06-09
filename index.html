@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Training Log</title>
+    <meta name="theme-color" content="#111827">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Training Log">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+    <link rel="icon" sizes="192x192" href="assets/icons/icon-192.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand-row">
+          <p class="eyebrow">Training Log</p>
+          <span id="appStatus" class="status-pill" aria-live="polite">Local</span>
+        </div>
+        <nav class="tabs" aria-label="Primary">
+          <button class="tab is-active" type="button" data-view="workouts">Workouts</button>
+          <button class="tab" type="button" data-view="weight">Body Weight</button>
+        </nav>
+      </header>
+
+      <section id="workoutsView" class="view is-active" aria-labelledby="pageTitle">
+        <h1 id="pageTitle">Workouts</h1>
+        <div id="workoutScreen"></div>
+      </section>
+
+      <section id="weightView" class="view" aria-label="Body weight tracker">
+        <h1>Body Weight</h1>
+        <section class="weight-layout">
+          <form id="weightForm" class="weight-entry">
+            <div>
+              <p class="eyebrow">Daily Check-in</p>
+              <h2>Body weight</h2>
+              <p class="muted">A clean daily log with a simple recent trend.</p>
+            </div>
+            <label>
+              <span>Date</span>
+              <input id="weightDate" name="date" type="date" required>
+            </label>
+            <label>
+              <span>Weight</span>
+              <div class="input-with-unit">
+                <input id="weightValue" name="weight" type="number" inputmode="decimal" min="1" step="0.1" placeholder="182.4" required>
+                <strong>lb</strong>
+              </div>
+            </label>
+            <button class="primary-button wide" type="submit">Save Weight</button>
+          </form>
+
+          <section class="panel trend-panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">Trend</p>
+                <h3 id="trendTitle">No entries yet</h3>
+              </div>
+              <span class="pill" id="trendDelta">0.0 lb</span>
+            </div>
+            <div class="chart-wrap">
+              <svg id="weightChart" viewBox="0 0 640 260" role="img" aria-label="Body weight trend chart"></svg>
+            </div>
+            <div id="weightHistory" class="history"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
