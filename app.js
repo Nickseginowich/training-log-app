@@ -87,127 +87,157 @@ const MOBILITY_ROUTINE = [
 
 const PROGRAM = {
   Monday: {
-    title: "Upper Strength + Posture",
+    title: "Upper Strength + Anti-Extension",
     exercises: [
-      exercise("weighted-pullups", "Weighted Pull-ups", "4", "5-8", "A. Strength", [
-        ["Goal", ["upper body strength without feeding extension"]],
-        ["Execution", ["ribs down", "abs lightly on", "avoid swinging or overextending"]]
+      exercise("pc-weighted-pullups", "Weighted Pull-ups", "4", "5-8", "A. Strength", [
+        ["Goal", ["upper strength without arching into extension"]],
+        ["Execution", ["ribs down", "slight posterior tilt at the bottom", "no swinging"]]
       ]),
-      exercise("weighted-dips", "Weighted Dips", "3", "6-8", "A. Strength", [
-        ["Goal", ["strong chest/triceps while keeping pelvis and ribs stacked"]],
-        ["Execution", ["chin slightly tucked", "no rib flare", "control the bottom"]]
+      exercise("pc-landmine-press", "Landmine Press", "4", "8", "A. Strength", [
+        ["Why", ["pressing without leaning back or flaring ribs"]],
+        ["Execution", ["glutes squeezed", "ribs stacked over pelvis", "exhale as you press"]]
       ]),
-      exercise("landmine-press", "Landmine Press", "3", "8", "A. Strength", [
-        ["Why", ["friendlier than heavy overhead pressing for rib flare and low-back extension"]],
-        ["Execution", ["glutes engaged", "ribs down", "press without leaning back"]]
+      exercise("pc-chest-supported-rows", "Chest-supported Rows", "4", "10", "B. Posture / Control", [
+        ["Purpose", ["upper-back strength with zero low-back load"]],
+        ["Execution", ["pause at the top", "no shrugging", "chest stays glued to pad"]]
       ]),
-      exercise("chest-supported-rows", "Chest-supported Rows", "4", "10", "B. Posture / Control", [
-        ["Purpose", ["upper-back strength", "posture support without low-back fatigue"]],
-        ["Execution", ["pause at the top", "keep chest supported", "do not shrug"]]
+      exercise("pc-ring-pushups", "Ring Pushups", "3", "12", "B. Posture / Control", [
+        ["Purpose", ["serratus control", "anti-extension under load"]],
+        ["Execution", ["hard RKC-style body line", "ribs down", "reach at the top"]]
       ]),
-      exercise("ring-pushups", "Ring Pushups", "3", "12", "B. Posture / Control", [
-        ["Purpose", ["serratus control", "shoulder stability", "clean pressing pattern"]],
-        ["Execution", ["ribs down", "body stays straight", "reach slightly at the top"]]
+      exercise("pc-face-pulls", "Face Pulls", "3", "15", "B. Posture / Control", [
+        ["Purpose", ["rear delts", "scap control"]],
+        ["Execution", ["high elbows", "do not arch to finish reps"]]
       ]),
-      exercise("face-pulls", "Face Pulls", "3", "15", "B. Posture / Control", [
-        ["Purpose", ["rear delts", "upper-back posture", "scap control"]],
-        ["Execution", ["high elbows", "smooth reps", "do not arch to finish"]]
+      exercise("pc-reverse-crunches", "Reverse Crunches", "3", "12-15", "C. Core (Tilt Drivers)", [
+        ["Why", ["directly trains posterior pelvic tilt", "the #1 core pattern for your fix"]],
+        ["Execution", ["curl pelvis toward ribs", "slow lower", "no leg-swing momentum"]]
       ]),
-      exercise("serratus-wall-slides-workout", "Serratus Wall Slides", "2", "15", "B. Posture / Control", [
-        ["Purpose", ["rib cage and scap positioning", "reduce chest-dominant posture"]],
-        ["Execution", ["forearms on wall", "ribs down", "reach slightly at top"]]
+      exercise("pc-rkc-plank", "RKC Plank", "3", "20-30 sec", "C. Core (Tilt Drivers)", [
+        ["Purpose", ["max-tension anti-extension", "glutes + abs co-contraction"]],
+        ["Execution", ["posterior tilt", "squeeze glutes hard", "pull elbows toward toes"]]
       ]),
-      exercise("hanging-knee-raises-curl", "Hanging Knee Raises with Pelvic Curl", "3", "10-12", "C. Core", [
-        ["Purpose", ["anti-extension core control", "pelvis control"]],
-        ["Execution", ["curl pelvis slightly", "avoid hip-flexor dominance", "no swinging"]]
-      ]),
-      exercise("rkc-plank", "RKC Plank", "3", "20-30 sec", "C. Core", [
-        ["Purpose", ["deep core tension", "ribs stacked over pelvis"]],
-        ["Execution", ["squeeze glutes", "pull elbows toward toes", "breathe behind the brace"]]
-      ]),
-      exercise("wall-hollow-holds", "Wall-assisted Hollow Holds", "3", "20-30 sec", "D. Skill", [
-        ["Use instead of handstands if needed", ["only handstand if ribs stay down and no banana back"]],
-        ["Execution", ["low back controlled", "ribs down", "reach long"]]
+      exercise("pc-suitcase-carry", "Suitcase Carry", "3", "40 yards/side", "C. Core (Tilt Drivers)", [
+        ["Purpose", ["standing core control", "trains your new posture under load"]],
+        ["Execution", ["ribs stacked", "do not lean or arch", "walk tall"]]
       ])
     ]
   },
   Tuesday: {
-    title: "Sprint + Athletic Core",
+    title: "Power + Carries (Posture-Safe)",
     exercises: [
-      exercise("sprints", "Sprints", "10", "10-20 sec", "Sprint Work", [
-        ["Prescription", ["6-10 rounds", "full recovery between sprints"]],
-        ["Purpose", ["athleticism", "conditioning", "power"]]
+      exercise("pc-hill-sprints", "Hill or Incline Sprints", "8", "10-15 sec", "Sprint Work", [
+        ["Why hill", ["forward lean reduces lumbar extension vs flat sprinting"]],
+        ["Prescription", ["full recovery between reps", "stop the session if low back tightens"]]
       ]),
-      exercise("sled-drags", "Sled Drags", "5", "rounds", "Post-sprint carries", [
-        ["Purpose", ["posture", "core stabilization", "pelvis control"]],
-        ["Execution", ["stay tall", "brace lightly", "steady steps"]]
+      exercise("pc-sled-push", "Sled Push", "5", "20 yards", "Power", [
+        ["Purpose", ["posterior chain power with zero spinal extension"]],
+        ["Execution", ["45-degree body line", "drive through whole foot"]]
       ]),
-      exercise("farmer-carries", "Farmer Carries", "4", "rounds", "Post-sprint carries", [
-        ["Purpose", ["posture", "grip", "core stabilization"]],
-        ["Execution", ["ribs down", "walk tall", "do not lean side to side"]]
+      exercise("pc-kb-swings", "Kettlebell Swings", "4", "12", "Power", [
+        ["Purpose", ["explosive hip hinge", "glute snap finish"]],
+        ["Most important", ["finish with glutes + posterior tilt, not a back arch", "if you feel low back, stop and reset"]]
+      ]),
+      exercise("pc-farmer-carries", "Farmer Carries", "4", "40 yards", "Carries", [
+        ["Purpose", ["posture under load", "grip", "core stabilization"]],
+        ["Execution", ["ribs down", "tall spine", "no side lean"]]
+      ])
+    ]
+  },
+  Wednesday: {
+    title: "Corrective Reset + Glute Pump",
+    exercises: [
+      exercise("pc-couch-stretch-wed", "Couch Stretch", "2", "90 sec/side", "1. Release (Tight Side)", [
+        ["Purpose", ["long-duration hip flexor opening", "the main restriction feeding your tilt"]],
+        ["Execution", ["glute squeezed", "pelvis tucked before leaning", "breathe slowly"]]
+      ]),
+      exercise("pc-ql-stretch", "Child's Pose + Knees-to-Chest", "2", "60 sec each", "1. Release (Tight Side)", [
+        ["Purpose", ["unload lumbar erectors and QL"]],
+        ["Execution", ["long exhales", "let the low back round gently"]]
+      ]),
+      exercise("pc-9090-breathing-wed", "90/90 Breathing (Feet on Wall)", "2", "5 breaths", "2. Reposition", [
+        ["Purpose", ["restack ribs over pelvis", "turn hamstrings and abs on"]],
+        ["Execution", ["full 5-6 sec exhale", "pause", "quiet nasal inhale"]]
+      ]),
+      exercise("pc-dead-bug-wed", "Dead Bug", "3", "8/side", "3. Activate (Weak Side)", [
+        ["Most important", ["low back stays pressed flat the entire time"]],
+        ["Execution", ["slow", "shorten range if back arches"]]
+      ]),
+      exercise("pc-banded-hip-thrust", "Banded Hip Thrust (Tilt Focus)", "3", "15", "3. Activate (Weak Side)", [
+        ["Purpose", ["high-rep glute pump in posterior tilt"]],
+        ["Execution", ["tuck pelvis first", "squeeze 2 sec at top", "ribs down"]]
+      ]),
+      exercise("pc-wall-tilt-drill", "Standing Wall Tilt Hold", "3", "60 sec", "4. Integrate", [
+        ["Why this matters most", ["this is your new default standing posture", "practice it until it is automatic"]],
+        ["Execution", ["flatten low back toward wall", "step away and hold the position", "breathe normally"]]
       ])
     ]
   },
   Thursday: {
-    title: "Lower Body + Pelvic Stability",
+    title: "Lower Body — Glute + Hamstring Priority",
     exercises: [
-      exercise("goblet-squats", "Goblet Squats", "4", "8", "Lower Body", [
-        ["Purpose", ["upright squat pattern", "controlled bracing", "clean lower-body strength"]]
+      exercise("pc-barbell-hip-thrust", "Barbell Hip Thrust", "4", "8-10", "A. Primary (Glutes First)", [
+        ["Why first", ["glutes are the #1 muscle that pulls your pelvis back to neutral", "train them freshest"]],
+        ["Most important", ["posterior tilt at top", "no lumbar arch", "ribs down"]]
       ]),
-      exercise("bulgarian-split-squats", "Bulgarian Split Squats", "4", "8 each leg", "Lower Body", [
-        ["Purpose", ["single-leg strength", "glute stability", "pelvic control"]]
+      exercise("pc-rdl", "Romanian Deadlift", "4", "8", "A. Primary (Glutes First)", [
+        ["Why", ["builds hamstrings at length — the muscles that anchor your pelvis from behind"]],
+        ["Execution", ["hinge, do not squat it", "flat back, soft knees", "stand up with glutes, no arch at lockout"]]
       ]),
-      exercise("barbell-hip-thrust", "Barbell Hip Thrust", "4", "10", "Lower Body", [
-        ["Most important", ["no lumbar arch at top", "posterior pelvic tilt", "ribs down"]],
-        ["Purpose", ["glute-mediated stability without low-back compensation"]]
+      exercise("pc-bulgarian-split-squats", "Bulgarian Split Squats (Glute Bias)", "3", "8/leg", "B. Secondary", [
+        ["Purpose", ["single-leg glute strength", "pelvic control"]],
+        ["Execution", ["slight forward torso lean", "pelvis tucked", "push through heel"]]
       ]),
-      exercise("hamstring-curls", "Hamstring Curls", "3", "12", "Lower Body", [
-        ["Purpose", ["hamstrings as pelvic stabilizers", "posterior-chain support"]]
+      exercise("pc-hamstring-curls", "Hamstring Curls", "3", "12", "B. Secondary", [
+        ["Purpose", ["direct hamstring volume", "pelvic stabilizers"]]
+      ]),
+      exercise("pc-goblet-squats", "Goblet Squats", "3", "8", "B. Secondary", [
+        ["Purpose", ["quad strength kept in the program, demoted from priority"]],
+        ["Execution", ["brace with slight tuck", "no butt-wink chasing depth"]]
+      ]),
+      exercise("pc-reverse-crunch-thu", "Reverse Crunches", "3", "12-15", "C. Core", [
+        ["Purpose", ["end every lower day owning posterior tilt"]],
+        ["Execution", ["slow eccentric", "no momentum"]]
       ])
     ]
   },
   Friday: {
-    title: "Athletic Full Body",
+    title: "Athletic Full Body (Posture-Safe)",
     exercises: [
-      superset("athletic-circuit", "Athletic Full Body Circuit", [
-        exercise("circuit-pullups", "Pullups", "5", "8-10", "Circuit"),
-        exercise("circuit-pushups", "Pushups", "5", "20", "Circuit"),
-        exercise("circuit-sled-push", "Sled Push", "5", "20 yards", "Circuit"),
-        exercise("circuit-walking-lunges", "Walking Lunges", "5", "10/leg", "Circuit"),
-        exercise("circuit-knee-raises", "Hanging Knee Raises with Pelvic Curl", "5", "12", "Circuit"),
-        exercise("circuit-farmer-carry", "Farmer Carry", "5", "40 yards", "Circuit")
+      superset("pc-athletic-circuit", "Posture-Safe Athletic Circuit", [
+        exercise("pc-circuit-pullups", "Pullups", "5", "8-10", "Circuit"),
+        exercise("pc-circuit-pushups", "Pushups (Ribs Down)", "5", "15-20", "Circuit"),
+        exercise("pc-circuit-sled-push", "Sled Push", "5", "20 yards", "Circuit"),
+        exercise("pc-circuit-reverse-lunges", "Reverse Lunges", "5", "10/leg", "Circuit", [
+          ["Why reverse", ["easier to keep pelvis tucked than walking lunges"]]
+        ]),
+        exercise("pc-circuit-knee-raises", "Hanging Knee Raises with Pelvic Curl", "5", "12", "Circuit"),
+        exercise("pc-circuit-suitcase-carry", "Suitcase Carry", "5", "40 yards/side", "Circuit")
       ])
     ]
   },
   Saturday: {
-    title: "Zone 2 Cardio",
+    title: "Zone 2 + Decompression",
     exercises: [
-      exercise("zone-2-cardio", "Zone 2 Cardio", "1", "30-45 min", "Conditioning", [
+      exercise("pc-zone-2", "Zone 2 Cardio", "1", "30-45 min", "Conditioning", [
         ["Prefer", ["incline walk", "bike", "rower"]],
-        ["Goal", ["easy aerobic work", "recovery", "fat loss support"]]
+        ["Goal", ["aerobic base", "recovery", "leanness support"]]
       ]),
-      exercise("couch-stretch", "Couch Stretch", "1", "45 sec/side", "Mobility / Recovery Flow", [
-        ["Purpose", ["open hip flexors without feeding extension"]],
+      exercise("pc-couch-stretch-sat", "Couch Stretch", "1", "90 sec/side", "Recovery Flow", [
         ["Execution", ["glute squeezed", "pelvis tucked", "ribs down"]]
       ]),
-      exercise("thoracic-rotations", "Thoracic Rotations", "1", "10/side", "Mobility / Recovery Flow", [
-        ["Purpose", ["upper-back rotation", "reduce low-back compensation"]],
-        ["Execution", ["knees stable", "rotate through upper back"]]
-      ]),
-      exercise("childs-pose-breathing", "Child's Pose Breathing", "1", "5 breaths", "Mobility / Recovery Flow", [
-        ["Purpose", ["downshift", "ribs", "breathing mechanics"]],
+      exercise("pc-childs-pose-sat", "Child's Pose Breathing", "1", "5 breaths", "Recovery Flow", [
         ["Execution", ["long exhale", "breathe into back ribs"]]
       ]),
-      exercise("adductor-mobility", "Adductor Mobility", "1", "10/side", "Mobility / Recovery Flow", [
-        ["Purpose", ["groin mobility", "pelvic control"]],
-        ["Execution", ["neutral spine", "ribs down", "slow range"]]
+      exercise("pc-hanging-decompression", "Hanging Decompression", "3", "30-45 sec", "Decompression", [
+        ["Purpose", ["spinal unloading"]],
+        ["Execution", ["relax into the hang", "no aggressive arching"]]
       ]),
-      exercise("hanging-decompression", "Hanging Decompression", "3", "30-45 sec", "Decompression", [
-        ["Purpose", ["spinal unloading", "shoulder opening"]],
-        ["Execution", ["relax into hang", "breathe slowly", "no aggressive arching"]]
+      exercise("pc-wall-tilt-sat", "Standing Wall Tilt Hold", "3", "60 sec", "Posture Practice", [
+        ["Purpose", ["rehearse your new default standing position"]],
+        ["Execution", ["flatten low back toward wall", "step away", "hold and breathe"]]
       ]),
-      exercise("reset-breathing-again", "90/90 Breathing Again", "2", "5 breaths", "Reset", [
-        ["Purpose", ["finish stacked", "reduce lumbar extension", "reconnect abs and hamstrings"]],
+      exercise("pc-9090-finish", "90/90 Breathing Finish", "2", "5 breaths", "Reset", [
         ["Execution", ["full exhale", "ribs down", "quiet inhale"]]
       ])
     ]

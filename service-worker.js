@@ -1,4 +1,4 @@
-const CACHE_VERSION = "2026-06-09-robust-pwa";
+const CACHE_VERSION = "2026-07-14-posture-replacement";
 const CACHE_NAME = `training-log-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
