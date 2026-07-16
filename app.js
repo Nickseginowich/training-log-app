@@ -272,7 +272,6 @@ const state = {
   view: "workouts",
   day: "",
   section: "",
-  openItem: "",
   workouts: readStore(STORAGE_KEYS.workouts, {}),
   weights: readStore(STORAGE_KEYS.weights, [])
 };
@@ -364,7 +363,6 @@ function renderDayList() {
     button.addEventListener("click", () => {
       state.day = button.dataset.day;
       state.section = "";
-      state.openItem = "";
       renderWorkoutScreen();
     });
   });
@@ -390,7 +388,6 @@ function renderDayChoices() {
   els.workoutScreen.querySelectorAll("[data-section]").forEach((button) => {
     button.addEventListener("click", () => {
       state.section = button.dataset.section;
-      state.openItem = "";
       renderWorkoutScreen();
     });
   });
@@ -453,40 +450,9 @@ function renderWorkout() {
   els.workoutScreen.innerHTML = `
     ${subnav(program.title)}
     ${renderWorkoutSections(program.exercises)}
-    <button class="primary-button wide save-bottom" type="button" id="saveWorkout">Save Workout</button>
   `;
 
   bindBack();
-  els.workoutScreen.querySelectorAll("[data-open]").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.openItem = state.openItem === button.dataset.open ? "" : button.dataset.open;
-      renderWorkout();
-    });
-  });
-
-  els.workoutScreen.querySelectorAll("[data-field]").forEach((input) => {
-    input.addEventListener("input", () => updateSet(input));
-    input.addEventListener("change", () => updateSet(input));
-  });
-
-  els.workoutScreen.querySelectorAll("[data-add-set]").forEach((button) => {
-    button.addEventListener("click", () => {
-      adjustSetCount(button.dataset.addSet, 1);
-      renderWorkout();
-    });
-  });
-
-  els.workoutScreen.querySelectorAll("[data-remove-set]").forEach((button) => {
-    button.addEventListener("click", () => {
-      adjustSetCount(button.dataset.removeSet, -1);
-      renderWorkout();
-    });
-  });
-
-  document.querySelector("#saveWorkout").addEventListener("click", () => {
-    writeStore(STORAGE_KEYS.workouts, state.workouts);
-    showToast("Workout saved");
-  });
 }
 
 function renderWorkoutSections(items) {
@@ -523,44 +489,21 @@ function groupWorkoutItems(items) {
 }
 
 function renderSingleExercise(item) {
-  const isOpen = state.openItem === item.id;
-  return `
-    <article class="exercise-row ${isOpen ? "is-open" : ""}">
-      <button class="exercise-line" type="button" data-open="${item.id}">
-        <span>
-          <strong>${item.title}</strong>
-          <small>${item.sets} x ${item.reps}</small>
-        </span>
-      </button>
-      ${isOpen ? renderWorkoutDetail(item) : ""}
-    </article>
-  `;
+  return renderWorkoutDetail(item);
 }
 
 function renderSuperset(group) {
-  const isOpen = state.openItem === group.id;
   const groupType = groupLabel(group);
   return `
-    <article class="exercise-row ${isOpen ? "is-open" : ""}">
-      <button class="exercise-line group-line" type="button" data-open="${group.id}">
-        <span>
-          <strong>${group.label}</strong>
-          <ul class="group-preview">
-            ${group.exercises.map((item) => `<li>${item.title} <em>${item.sets} x ${item.reps}</em></li>`).join("")}
-          </ul>
-        </span>
+    <div class="workout-group">
+      <div class="workout-group-header">
+        <strong>${group.label}</strong>
         <span class="pill">${groupType}</span>
-      </button>
-      ${isOpen ? `
-        <div class="superset-body">
-          ${group.exercises.map((item) => `
-            <div class="superset-exercise">
-              ${renderWorkoutDetail(item)}
-            </div>
-          `).join("")}
-        </div>
-      ` : ""}
-    </article>
+      </div>
+      <div class="workout-group-list">
+        ${group.exercises.map((item) => renderWorkoutDetail(item)).join("")}
+      </div>
+    </div>
   `;
 }
 
@@ -570,7 +513,7 @@ function groupLabel(group) {
 
 function renderWorkoutDetail(item) {
   return `
-    <div class="workout-detail">
+    <article class="mobility-card workout-card">
       <div class="mobility-header workout-header">
         <p>${item.title}</p>
         <span>(${item.note})</span>
@@ -578,65 +521,21 @@ function renderWorkoutDetail(item) {
       ${EXERCISE_IMAGES[item.id] ? `<img class="mobility-image" src="${EXERCISE_IMAGES[item.id]}" alt="${item.title} form reference">` : ""}
       <div class="workout-content">
         <span class="pill">${item.sets} x ${item.reps}</span>
-        ${renderSetGrid(item)}
+        ${item.sections.length ? `
+          <div class="mobility-notes">
+            ${item.sections.map(([heading, points]) => `
+              <section>
+                <strong>${heading}</strong>
+                <ul>
+                  ${points.map((point) => `<li>${point}</li>`).join("")}
+                </ul>
+              </section>
+            `).join("")}
+          </div>
+        ` : ""}
       </div>
-    </div>
+    </article>
   `;
-}
-
-function renderSetGrid(item) {
-  const log = getWorkoutLog();
-  const savedSets = getExerciseSets(log, item);
-  const rows = savedSets.map((saved, setIndex) => {
-    return `
-      <div class="set-row">
-        <div>${setIndex + 1}</div>
-        <div><input aria-label="${item.title} set ${setIndex + 1} weight" type="number" inputmode="decimal" min="0" step="2.5" placeholder="0" value="${saved.weight || ""}" data-field="weight" data-exercise="${item.id}" data-set="${setIndex}"></div>
-        <div><input aria-label="${item.title} set ${setIndex + 1} reps" type="number" inputmode="decimal" min="0" step="1" placeholder="${item.reps}" value="${saved.reps || ""}" data-field="reps" data-exercise="${item.id}" data-set="${setIndex}"></div>
-        <div><input aria-label="${item.title} set ${setIndex + 1} complete" type="checkbox" ${saved.done ? "checked" : ""} data-field="done" data-exercise="${item.id}" data-set="${setIndex}"></div>
-      </div>
-    `;
-  }).join("");
-
-  return `
-    <div class="set-controls">
-      <button type="button" data-add-set="${item.id}">+ Set</button>
-      <button type="button" data-remove-set="${item.id}" ${savedSets.length <= 1 ? "disabled" : ""}>Remove Set</button>
-    </div>
-    <div class="set-grid">
-      <div class="set-row header">
-        <div>Set</div>
-        <div>Weight</div>
-        <div>Reps</div>
-        <div>Done</div>
-      </div>
-      ${rows}
-    </div>
-  `;
-}
-
-function getExerciseSets(log, item) {
-  const defaultCount = Math.max(1, Number(item.sets) || 1);
-  if (!log.exercises[item.id]) log.exercises[item.id] = [];
-
-  while (log.exercises[item.id].length < defaultCount) {
-    log.exercises[item.id].push({});
-  }
-
-  return log.exercises[item.id];
-}
-
-function adjustSetCount(exerciseId, delta) {
-  const log = getWorkoutLog();
-  if (!log.exercises[exerciseId]) log.exercises[exerciseId] = [{}];
-
-  if (delta > 0) {
-    log.exercises[exerciseId].push({});
-  } else if (log.exercises[exerciseId].length > 1) {
-    log.exercises[exerciseId].pop();
-  }
-
-  persistWorkoutLog(log);
 }
 
 function subnav(title) {
@@ -655,24 +554,11 @@ function bindBack() {
   back.addEventListener("click", () => {
     if (state.section) {
       state.section = "";
-      state.openItem = "";
     } else {
       state.day = "";
     }
     renderWorkoutScreen();
   });
-}
-
-function updateSet(input) {
-  const log = getWorkoutLog();
-  const exerciseId = input.dataset.exercise;
-  const setIndex = input.dataset.set;
-  const field = input.dataset.field;
-
-  if (!log.exercises[exerciseId]) log.exercises[exerciseId] = [];
-  if (!log.exercises[exerciseId][setIndex]) log.exercises[exerciseId][setIndex] = {};
-  log.exercises[exerciseId][setIndex][field] = field === "done" ? input.checked : input.value;
-  persistWorkoutLog(log);
 }
 
 function renderWeight() {

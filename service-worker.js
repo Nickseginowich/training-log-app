@@ -1,4 +1,4 @@
-const CACHE_VERSION = "2026-07-15-workout-images";
+const CACHE_VERSION = "2026-07-16-workout-guide";
 const CACHE_NAME = `training-log-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
