@@ -85,6 +85,24 @@ const MOBILITY_ROUTINE = [
   }
 ];
 
+const EXERCISE_IMAGES = {
+  "pc-rkc-plank": "assets/workouts/rkc-plank.png",
+  "pc-reverse-crunches": "assets/workouts/reverse-crunch.png",
+  "pc-reverse-crunch-thu": "assets/workouts/reverse-crunch.png",
+  "pc-landmine-press": "assets/workouts/landmine-press.png",
+  "pc-ring-pushups": "assets/workouts/ring-pushup.png",
+  "pc-face-pulls": "assets/workouts/face-pull.png",
+  "pc-kb-swings": "assets/workouts/kb-swing.png",
+  "pc-couch-stretch-wed": "assets/workouts/couch-stretch.png",
+  "pc-couch-stretch-sat": "assets/workouts/couch-stretch.png",
+  "pc-wall-tilt-drill": "assets/workouts/wall-tilt.png",
+  "pc-wall-tilt-sat": "assets/workouts/wall-tilt.png",
+  "pc-circuit-knee-raises": "assets/workouts/hanging-knee-raise.png",
+  "pc-dead-bug-wed": "assets/mobility/03-dead-bug-native.png",
+  "pc-9090-breathing-wed": "assets/mobility/01-hip-lift-native.png",
+  "pc-9090-finish": "assets/mobility/01-hip-lift-native.png"
+};
+
 const PROGRAM = {
   Monday: {
     title: "Upper Strength + Anti-Extension",
@@ -557,6 +575,7 @@ function renderWorkoutDetail(item) {
         <p>${item.title}</p>
         <span>(${item.note})</span>
       </div>
+      ${EXERCISE_IMAGES[item.id] ? `<img class="mobility-image" src="${EXERCISE_IMAGES[item.id]}" alt="${item.title} form reference">` : ""}
       <div class="workout-content">
         <span class="pill">${item.sets} x ${item.reps}</span>
         ${renderSetGrid(item)}
