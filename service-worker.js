@@ -1,4 +1,4 @@
-const CACHE_VERSION = "2026-07-17-workout-cards";
+const CACHE_VERSION = "2026-07-18-section-checklists";
 const CACHE_NAME = `training-log-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
@@ -24,7 +24,28 @@ const APP_SHELL = [
   "./assets/workouts/kb-swing.png",
   "./assets/workouts/couch-stretch.png",
   "./assets/workouts/wall-tilt.png",
-  "./assets/workouts/hanging-knee-raise.png"
+  "./assets/workouts/hanging-knee-raise.png",
+  "./assets/workouts/weighted-pullup.png",
+  "./assets/workouts/chest-supported-row.png",
+  "./assets/workouts/cable-crunch.png",
+  "./assets/workouts/suitcase-carry.png",
+  "./assets/workouts/sled-push.png",
+  "./assets/workouts/backward-sled-drag.png",
+  "./assets/workouts/farmer-carry.png",
+  "./assets/workouts/hollow-body-hold.png",
+  "./assets/workouts/childs-pose-knees-to-chest.png",
+  "./assets/workouts/childs-pose-breathing.png",
+  "./assets/workouts/banded-hip-thrust.png",
+  "./assets/workouts/barbell-hip-thrust.png",
+  "./assets/workouts/romanian-deadlift.png",
+  "./assets/workouts/bulgarian-split-squat.png",
+  "./assets/workouts/hamstring-curl.png",
+  "./assets/workouts/goblet-squat.png",
+  "./assets/workouts/inverted-row.png",
+  "./assets/workouts/pushup.png",
+  "./assets/workouts/reverse-lunge.png",
+  "./assets/workouts/zone-2-cardio.png",
+  "./assets/workouts/hanging-decompression.png"
 ];
 
 self.addEventListener("install", (event) => {

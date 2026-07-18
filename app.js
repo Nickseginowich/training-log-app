@@ -86,19 +86,44 @@ const MOBILITY_ROUTINE = [
 ];
 
 const EXERCISE_IMAGES = {
+  "pc-weighted-pullups": "assets/workouts/weighted-pullup.png",
   "pc-rkc-plank": "assets/workouts/rkc-plank.png",
   "pc-reverse-crunches": "assets/workouts/reverse-crunch.png",
   "pc-reverse-crunch-thu": "assets/workouts/reverse-crunch.png",
   "pc-landmine-press": "assets/workouts/landmine-press.png",
+  "pc-chest-supported-rows": "assets/workouts/chest-supported-row.png",
   "pc-ring-pushups": "assets/workouts/ring-pushup.png",
   "pc-face-pulls": "assets/workouts/face-pull.png",
+  "pc-cable-crunch": "assets/workouts/cable-crunch.png",
+  "pc-suitcase-carry": "assets/workouts/suitcase-carry.png",
+  "pc-sled-push": "assets/workouts/sled-push.png",
+  "pc-backward-sled-drag": "assets/workouts/backward-sled-drag.png",
   "pc-kb-swings": "assets/workouts/kb-swing.png",
+  "pc-farmer-carries": "assets/workouts/farmer-carry.png",
+  "pc-hollow-hold-tue": "assets/workouts/hollow-body-hold.png",
   "pc-couch-stretch-wed": "assets/workouts/couch-stretch.png",
+  "pc-ql-stretch": "assets/workouts/childs-pose-knees-to-chest.png",
+  "pc-hollow-hold-wed": "assets/workouts/hollow-body-hold.png",
+  "pc-banded-hip-thrust": "assets/workouts/banded-hip-thrust.png",
   "pc-couch-stretch-sat": "assets/workouts/couch-stretch.png",
   "pc-wall-tilt-drill": "assets/workouts/wall-tilt.png",
   "pc-wall-tilt-sat": "assets/workouts/wall-tilt.png",
+  "pc-barbell-hip-thrust": "assets/workouts/barbell-hip-thrust.png",
+  "pc-rdl": "assets/workouts/romanian-deadlift.png",
+  "pc-bulgarian-split-squats": "assets/workouts/bulgarian-split-squat.png",
+  "pc-hamstring-curls": "assets/workouts/hamstring-curl.png",
+  "pc-goblet-squats": "assets/workouts/goblet-squat.png",
+  "pc-circuit-sled-push": "assets/workouts/sled-push.png",
+  "pc-circuit-inverted-rows": "assets/workouts/inverted-row.png",
+  "pc-circuit-pushups": "assets/workouts/pushup.png",
+  "pc-circuit-reverse-lunges": "assets/workouts/reverse-lunge.png",
   "pc-circuit-knee-raises": "assets/workouts/hanging-knee-raise.png",
+  "pc-circuit-banded-hip-thrust": "assets/workouts/banded-hip-thrust.png",
+  "pc-circuit-suitcase-carry": "assets/workouts/suitcase-carry.png",
   "pc-knee-raises-thu": "assets/workouts/hanging-knee-raise.png",
+  "pc-zone-2": "assets/workouts/zone-2-cardio.png",
+  "pc-childs-pose-sat": "assets/workouts/childs-pose-breathing.png",
+  "pc-hanging-decompression": "assets/workouts/hanging-decompression.png",
   "pc-dead-bug-tue": "assets/mobility/03-dead-bug-native.png",
   "pc-dead-bug-wed": "assets/mobility/03-dead-bug-native.png",
   "pc-9090-breathing-wed": "assets/mobility/01-hip-lift-native.png",
@@ -306,6 +331,7 @@ const state = {
   view: "workouts",
   day: "",
   section: "",
+  workoutGroup: "",
   workouts: readStore(STORAGE_KEYS.workouts, {}),
   weights: readStore(STORAGE_KEYS.weights, [])
 };
@@ -397,6 +423,7 @@ function renderDayList() {
     button.addEventListener("click", () => {
       state.day = button.dataset.day;
       state.section = "";
+      state.workoutGroup = "";
       renderWorkoutScreen();
     });
   });
@@ -422,6 +449,7 @@ function renderDayChoices() {
   els.workoutScreen.querySelectorAll("[data-section]").forEach((button) => {
     button.addEventListener("click", () => {
       state.section = button.dataset.section;
+      state.workoutGroup = "";
       renderWorkoutScreen();
     });
   });
@@ -481,38 +509,58 @@ function renderMobilityCard(item, index, log) {
 
 function renderWorkout() {
   const program = PROGRAM[state.day];
+  const sections = groupWorkoutItems(program.exercises);
+  const selectedIndex = Number(state.workoutGroup);
+  const selectedSection = state.workoutGroup === "" ? null : sections[selectedIndex];
+  const log = getWorkoutLog();
+
+  if (!selectedSection) {
+    els.workoutScreen.innerHTML = `
+      ${subnav(program.title)}
+      <div class="workout-section-list">
+        ${sections.map((section, index) => renderWorkoutSectionChoice(section, index, log)).join("")}
+      </div>
+    `;
+
+    bindBack();
+    els.workoutScreen.querySelectorAll("[data-workout-group]").forEach((button) => {
+      button.addEventListener("click", () => {
+        state.workoutGroup = button.dataset.workoutGroup;
+        renderWorkout();
+      });
+    });
+    return;
+  }
+
   els.workoutScreen.innerHTML = `
-    ${subnav(program.title)}
-    ${renderWorkoutSections(program.exercises)}
+    ${subnav(selectedSection.title)}
+    <div class="workout-section-detail">
+      ${flattenWorkoutSection(selectedSection).map((item, index) => renderWorkoutDetail(item, index + 1, log)).join("")}
+    </div>
   `;
 
   bindBack();
+  els.workoutScreen.querySelectorAll("[data-set-check]").forEach((input) => {
+    input.addEventListener("change", () => updateSetCheck(input));
+  });
 }
 
-function renderWorkoutSections(items) {
-  const sections = groupWorkoutItems(items);
-  let exerciseNumber = 0;
-
+function renderWorkoutSectionChoice(section, index, log) {
+  const exercises = flattenWorkoutSection(section);
+  const progress = getSectionProgress(exercises, log);
   return `
-    <div class="workout-sections">
-      ${sections.map((section) => `
-        <section class="workout-section">
-          <h3>${section.title}</h3>
-          <div class="workout-list">
-            ${section.items.map((item) => {
-              if (item.type === "superset") {
-                const groupStart = exerciseNumber + 1;
-                exerciseNumber += item.exercises.length;
-                return renderSuperset(item, groupStart);
-              }
-
-              exerciseNumber += 1;
-              return renderSingleExercise(item, exerciseNumber);
-            }).join("")}
-          </div>
-        </section>
-      `).join("")}
-    </div>
+    <button class="workout-section-choice" type="button" data-workout-group="${index}">
+      <span class="section-number">${String(index + 1).padStart(2, "0")}</span>
+      <span class="section-copy">
+        <strong>${section.title}</strong>
+        <small>${exercises.length} ${exercises.length === 1 ? "exercise" : "exercises"}</small>
+        <ul>
+          ${exercises.map((item) => `<li>${item.title} <em>${item.sets} x ${item.reps}</em></li>`).join("")}
+        </ul>
+        <span class="section-progress">${progress.completed} of ${progress.total} sets complete</span>
+      </span>
+      <span class="section-chevron" aria-hidden="true">›</span>
+    </button>
   `;
 }
 
@@ -532,30 +580,15 @@ function groupWorkoutItems(items) {
   return sections;
 }
 
-function renderSingleExercise(item, exerciseNumber) {
-  return renderWorkoutDetail(item, exerciseNumber);
-}
-
-function renderSuperset(group, groupStart) {
-  const groupType = groupLabel(group);
-  return `
-    <div class="workout-group">
-      <div class="workout-group-header">
-        <strong>${group.label}</strong>
-        <span class="pill">${groupType}</span>
-      </div>
-      <div class="workout-group-list">
-        ${group.exercises.map((item, index) => renderWorkoutDetail(item, groupStart + index)).join("")}
-      </div>
-    </div>
-  `;
+function flattenWorkoutSection(section) {
+  return section.items.flatMap((item) => item.type === "superset" ? item.exercises : [item]);
 }
 
 function groupLabel(group) {
   return group.label.toLowerCase().includes("circuit") ? "Circuit" : "Superset";
 }
 
-function renderWorkoutDetail(item, exerciseNumber) {
+function renderWorkoutDetail(item, exerciseNumber, log) {
   return `
     <article class="mobility-card workout-card">
       <div class="mobility-header workout-header">
@@ -565,6 +598,7 @@ function renderWorkoutDetail(item, exerciseNumber) {
       ${EXERCISE_IMAGES[item.id] ? `<img class="mobility-image" src="${EXERCISE_IMAGES[item.id]}" alt="${item.title} form reference">` : ""}
       <div class="workout-content">
         <span class="pill">${item.sets} x ${item.reps}</span>
+        ${renderSetChecks(item, log)}
         ${item.sections.length ? `
           <div class="mobility-notes">
             ${item.sections.map(([heading, points]) => `
@@ -582,6 +616,50 @@ function renderWorkoutDetail(item, exerciseNumber) {
   `;
 }
 
+function renderSetChecks(item, log) {
+  const setCount = getPrescribedSetCount(item);
+  const savedSets = Array.isArray(log.exercises[item.id]) ? log.exercises[item.id] : [];
+
+  return `
+    <fieldset class="set-checks">
+      <legend>Complete each set</legend>
+      <div class="set-check-list">
+        ${Array.from({ length: setCount }, (_, setIndex) => `
+          <label class="set-check">
+            <input class="check" type="checkbox" data-set-check data-exercise="${item.id}" data-set="${setIndex}" ${savedSets[setIndex]?.done ? "checked" : ""}>
+            <span>Set ${setIndex + 1}</span>
+          </label>
+        `).join("")}
+      </div>
+    </fieldset>
+  `;
+}
+
+function getPrescribedSetCount(item) {
+  return Math.max(1, Number.parseInt(item.sets, 10) || 1);
+}
+
+function getSectionProgress(exercises, log) {
+  return exercises.reduce((progress, item) => {
+    const setCount = getPrescribedSetCount(item);
+    const savedSets = Array.isArray(log.exercises[item.id]) ? log.exercises[item.id] : [];
+    progress.total += setCount;
+    progress.completed += savedSets.slice(0, setCount).filter((set) => set?.done).length;
+    return progress;
+  }, { completed: 0, total: 0 });
+}
+
+function updateSetCheck(input) {
+  const log = getWorkoutLog();
+  const exerciseId = input.dataset.exercise;
+  const setIndex = Number(input.dataset.set);
+
+  if (!Array.isArray(log.exercises[exerciseId])) log.exercises[exerciseId] = [];
+  if (!log.exercises[exerciseId][setIndex]) log.exercises[exerciseId][setIndex] = {};
+  log.exercises[exerciseId][setIndex].done = input.checked;
+  persistWorkoutLog(log);
+}
+
 function subnav(title) {
   return `
     <div class="subnav">
@@ -596,6 +674,12 @@ function bindBack() {
   if (!back) return;
 
   back.addEventListener("click", () => {
+    if (state.workoutGroup !== "") {
+      state.workoutGroup = "";
+      renderWorkout();
+      return;
+    }
+
     if (state.section) {
       state.section = "";
     } else {
