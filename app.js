@@ -85,24 +85,6 @@ const MOBILITY_ROUTINE = [
   }
 ];
 
-const EXERCISE_IMAGES = {
-  "pc-rkc-plank": "assets/workouts/rkc-plank.png",
-  "pc-reverse-crunches": "assets/workouts/reverse-crunch.png",
-  "pc-reverse-crunch-thu": "assets/workouts/reverse-crunch.png",
-  "pc-landmine-press": "assets/workouts/landmine-press.png",
-  "pc-ring-pushups": "assets/workouts/ring-pushup.png",
-  "pc-face-pulls": "assets/workouts/face-pull.png",
-  "pc-kb-swings": "assets/workouts/kb-swing.png",
-  "pc-couch-stretch-wed": "assets/workouts/couch-stretch.png",
-  "pc-couch-stretch-sat": "assets/workouts/couch-stretch.png",
-  "pc-wall-tilt-drill": "assets/workouts/wall-tilt.png",
-  "pc-wall-tilt-sat": "assets/workouts/wall-tilt.png",
-  "pc-circuit-knee-raises": "assets/workouts/hanging-knee-raise.png",
-  "pc-dead-bug-wed": "assets/mobility/03-dead-bug-native.png",
-  "pc-9090-breathing-wed": "assets/mobility/01-hip-lift-native.png",
-  "pc-9090-finish": "assets/mobility/01-hip-lift-native.png"
-};
-
 const PROGRAM = {
   Monday: {
     title: "Upper Strength + Anti-Extension",
@@ -135,6 +117,10 @@ const PROGRAM = {
         ["Purpose", ["max-tension anti-extension", "glutes + abs co-contraction"]],
         ["Execution", ["posterior tilt", "squeeze glutes hard", "pull elbows toward toes"]]
       ]),
+      exercise("pc-cable-crunch", "Cable or Kneeling Crunch", "3", "12-15", "C. Core (Tilt Drivers)", [
+        ["Why", ["loaded trunk flexion", "directly strengthens the abs that posterior-tilt your pelvis"]],
+        ["Execution", ["curl ribs toward pelvis", "round the upper back", "hips stay still — no hip flexor takeover"]]
+      ]),
       exercise("pc-suitcase-carry", "Suitcase Carry", "3", "40 yards/side", "C. Core (Tilt Drivers)", [
         ["Purpose", ["standing core control", "trains your new posture under load"]],
         ["Execution", ["ribs stacked", "do not lean or arch", "walk tall"]]
@@ -144,13 +130,14 @@ const PROGRAM = {
   Tuesday: {
     title: "Power + Carries (Posture-Safe)",
     exercises: [
-      exercise("pc-hill-sprints", "Hill or Incline Sprints", "8", "10-15 sec", "Sprint Work", [
-        ["Why hill", ["forward lean reduces lumbar extension vs flat sprinting"]],
-        ["Prescription", ["full recovery between reps", "stop the session if low back tightens"]]
-      ]),
-      exercise("pc-sled-push", "Sled Push", "5", "20 yards", "Power", [
+      exercise("pc-sled-push", "Heavy Sled Push", "5", "20 yards", "Power", [
         ["Purpose", ["posterior chain power with zero spinal extension"]],
+        ["Note", ["sprints are paused until your tilt is fixed — sprinting trains the exact pattern we're erasing", "sled work replaces them with none of the downside"]],
         ["Execution", ["45-degree body line", "drive through whole foot"]]
+      ]),
+      exercise("pc-backward-sled-drag", "Backward Sled Drag", "4", "20 yards", "Power", [
+        ["Why", ["trains quads with zero lumbar extension", "the position is naturally posterior-tilted"]],
+        ["Execution", ["stay low", "small quick steps", "ribs down the whole way"]]
       ]),
       exercise("pc-kb-swings", "Kettlebell Swings", "4", "12", "Power", [
         ["Purpose", ["explosive hip hinge", "glute snap finish"]],
@@ -159,6 +146,14 @@ const PROGRAM = {
       exercise("pc-farmer-carries", "Farmer Carries", "4", "40 yards", "Carries", [
         ["Purpose", ["posture under load", "grip", "core stabilization"]],
         ["Execution", ["ribs down", "tall spine", "no side lean"]]
+      ]),
+      exercise("pc-dead-bug-tue", "Dead Bug", "3", "8/side", "Core Finisher", [
+        ["Most important", ["low back pressed flat the entire time"]],
+        ["Execution", ["slow", "shorten range if back arches"]]
+      ]),
+      exercise("pc-hollow-hold-tue", "Hollow Body Hold", "3", "20-30 sec", "Core Finisher", [
+        ["Why", ["the hollow position IS posterior pelvic tilt under tension"]],
+        ["Execution", ["low back pressed into floor", "ribs down", "arms and legs only as far as you can hold the flat back"]]
       ])
     ]
   },
@@ -180,6 +175,10 @@ const PROGRAM = {
       exercise("pc-dead-bug-wed", "Dead Bug", "3", "8/side", "3. Activate (Weak Side)", [
         ["Most important", ["low back stays pressed flat the entire time"]],
         ["Execution", ["slow", "shorten range if back arches"]]
+      ]),
+      exercise("pc-hollow-hold-wed", "Hollow Body Hold", "3", "20-30 sec", "3. Activate (Weak Side)", [
+        ["Why", ["posterior pelvic tilt under tension", "directly loads your new position"]],
+        ["Execution", ["low back pressed into floor", "ribs down", "shorten the lever if the back lifts"]]
       ]),
       exercise("pc-banded-hip-thrust", "Banded Hip Thrust (Tilt Focus)", "3", "15", "3. Activate (Weak Side)", [
         ["Purpose", ["high-rep glute pump in posterior tilt"]],
@@ -216,6 +215,10 @@ const PROGRAM = {
       exercise("pc-reverse-crunch-thu", "Reverse Crunches", "3", "12-15", "C. Core", [
         ["Purpose", ["end every lower day owning posterior tilt"]],
         ["Execution", ["slow eccentric", "no momentum"]]
+      ]),
+      exercise("pc-knee-raises-thu", "Hanging Knee Raises with Pelvic Curl", "3", "10-12", "C. Core", [
+        ["Why", ["the pelvic curl at the top is the rep — knees up alone is hip flexors"]],
+        ["Execution", ["knees up, then curl pelvis toward ribs", "slow lower", "no swinging"]]
       ])
     ]
   },
@@ -223,14 +226,23 @@ const PROGRAM = {
     title: "Athletic Full Body (Posture-Safe)",
     exercises: [
       superset("pc-athletic-circuit", "Posture-Safe Athletic Circuit", [
-        exercise("pc-circuit-pullups", "Pullups", "5", "8-10", "Circuit"),
-        exercise("pc-circuit-pushups", "Pushups (Ribs Down)", "5", "15-20", "Circuit"),
         exercise("pc-circuit-sled-push", "Sled Push", "5", "20 yards", "Circuit"),
+        exercise("pc-circuit-inverted-rows", "Inverted Rows", "5", "10-12", "Circuit", [
+          ["Why not pullups", ["horizontal pull with the body held as a rigid plank", "no lat-driven arching when fatigued"]],
+          ["Execution", ["glutes squeezed", "straight line head to heels", "ribs down"]]
+        ]),
+        exercise("pc-circuit-pushups", "Pushups (Ribs Down)", "5", "15-20", "Circuit"),
         exercise("pc-circuit-reverse-lunges", "Reverse Lunges", "5", "10/leg", "Circuit", [
           ["Why reverse", ["easier to keep pelvis tucked than walking lunges"]]
         ]),
         exercise("pc-circuit-knee-raises", "Hanging Knee Raises with Pelvic Curl", "5", "12", "Circuit"),
-        exercise("pc-circuit-suitcase-carry", "Suitcase Carry", "5", "40 yards/side", "Circuit")
+        exercise("pc-circuit-banded-hip-thrust", "Banded Hip Thrusts", "5", "15", "Circuit", [
+          ["Purpose", ["direct glute pump inside the circuit"]],
+          ["Execution", ["tuck pelvis first", "squeeze at top", "ribs down"]]
+        ]),
+        exercise("pc-circuit-suitcase-carry", "Suitcase Carry (Between Rounds)", "5", "40 yards/side", "Circuit", [
+          ["How", ["use this as your walking rest between circuit rounds"]]
+        ])
       ])
     ]
   },
@@ -238,7 +250,9 @@ const PROGRAM = {
     title: "Zone 2 + Decompression",
     exercises: [
       exercise("pc-zone-2", "Zone 2 Cardio", "1", "30-45 min", "Conditioning", [
-        ["Prefer", ["incline walk", "bike", "rower"]],
+        ["Best mode", ["incline treadmill walk — every stride is free hip-extension work"]],
+        ["Also fine", ["rower"]],
+        ["Minimize", ["long bike sessions — 45 min of hip flexion feeds the tight hip flexors"]],
         ["Goal", ["aerobic base", "recovery", "leanness support"]]
       ]),
       exercise("pc-couch-stretch-sat", "Couch Stretch", "1", "90 sec/side", "Recovery Flow", [
@@ -272,6 +286,7 @@ const state = {
   view: "workouts",
   day: "",
   section: "",
+  openItem: "",
   workouts: readStore(STORAGE_KEYS.workouts, {}),
   weights: readStore(STORAGE_KEYS.weights, [])
 };
@@ -363,6 +378,7 @@ function renderDayList() {
     button.addEventListener("click", () => {
       state.day = button.dataset.day;
       state.section = "";
+      state.openItem = "";
       renderWorkoutScreen();
     });
   });
@@ -388,6 +404,7 @@ function renderDayChoices() {
   els.workoutScreen.querySelectorAll("[data-section]").forEach((button) => {
     button.addEventListener("click", () => {
       state.section = button.dataset.section;
+      state.openItem = "";
       renderWorkoutScreen();
     });
   });
@@ -450,9 +467,40 @@ function renderWorkout() {
   els.workoutScreen.innerHTML = `
     ${subnav(program.title)}
     ${renderWorkoutSections(program.exercises)}
+    <button class="primary-button wide save-bottom" type="button" id="saveWorkout">Save Workout</button>
   `;
 
   bindBack();
+  els.workoutScreen.querySelectorAll("[data-open]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.openItem = state.openItem === button.dataset.open ? "" : button.dataset.open;
+      renderWorkout();
+    });
+  });
+
+  els.workoutScreen.querySelectorAll("[data-field]").forEach((input) => {
+    input.addEventListener("input", () => updateSet(input));
+    input.addEventListener("change", () => updateSet(input));
+  });
+
+  els.workoutScreen.querySelectorAll("[data-add-set]").forEach((button) => {
+    button.addEventListener("click", () => {
+      adjustSetCount(button.dataset.addSet, 1);
+      renderWorkout();
+    });
+  });
+
+  els.workoutScreen.querySelectorAll("[data-remove-set]").forEach((button) => {
+    button.addEventListener("click", () => {
+      adjustSetCount(button.dataset.removeSet, -1);
+      renderWorkout();
+    });
+  });
+
+  document.querySelector("#saveWorkout").addEventListener("click", () => {
+    writeStore(STORAGE_KEYS.workouts, state.workouts);
+    showToast("Workout saved");
+  });
 }
 
 function renderWorkoutSections(items) {
@@ -489,21 +537,44 @@ function groupWorkoutItems(items) {
 }
 
 function renderSingleExercise(item) {
-  return renderWorkoutDetail(item);
+  const isOpen = state.openItem === item.id;
+  return `
+    <article class="exercise-row ${isOpen ? "is-open" : ""}">
+      <button class="exercise-line" type="button" data-open="${item.id}">
+        <span>
+          <strong>${item.title}</strong>
+          <small>${item.sets} x ${item.reps}</small>
+        </span>
+      </button>
+      ${isOpen ? renderWorkoutDetail(item) : ""}
+    </article>
+  `;
 }
 
 function renderSuperset(group) {
+  const isOpen = state.openItem === group.id;
   const groupType = groupLabel(group);
   return `
-    <div class="workout-group">
-      <div class="workout-group-header">
-        <strong>${group.label}</strong>
+    <article class="exercise-row ${isOpen ? "is-open" : ""}">
+      <button class="exercise-line group-line" type="button" data-open="${group.id}">
+        <span>
+          <strong>${group.label}</strong>
+          <ul class="group-preview">
+            ${group.exercises.map((item) => `<li>${item.title} <em>${item.sets} x ${item.reps}</em></li>`).join("")}
+          </ul>
+        </span>
         <span class="pill">${groupType}</span>
-      </div>
-      <div class="workout-group-list">
-        ${group.exercises.map((item) => renderWorkoutDetail(item)).join("")}
-      </div>
-    </div>
+      </button>
+      ${isOpen ? `
+        <div class="superset-body">
+          ${group.exercises.map((item) => `
+            <div class="superset-exercise">
+              ${renderWorkoutDetail(item)}
+            </div>
+          `).join("")}
+        </div>
+      ` : ""}
+    </article>
   `;
 }
 
@@ -513,29 +584,72 @@ function groupLabel(group) {
 
 function renderWorkoutDetail(item) {
   return `
-    <article class="mobility-card workout-card">
+    <div class="workout-detail">
       <div class="mobility-header workout-header">
         <p>${item.title}</p>
         <span>(${item.note})</span>
       </div>
-      ${EXERCISE_IMAGES[item.id] ? `<img class="mobility-image" src="${EXERCISE_IMAGES[item.id]}" alt="${item.title} form reference">` : ""}
       <div class="workout-content">
         <span class="pill">${item.sets} x ${item.reps}</span>
-        ${item.sections.length ? `
-          <div class="mobility-notes">
-            ${item.sections.map(([heading, points]) => `
-              <section>
-                <strong>${heading}</strong>
-                <ul>
-                  ${points.map((point) => `<li>${point}</li>`).join("")}
-                </ul>
-              </section>
-            `).join("")}
-          </div>
-        ` : ""}
+        ${renderSetGrid(item)}
       </div>
-    </article>
+    </div>
   `;
+}
+
+function renderSetGrid(item) {
+  const log = getWorkoutLog();
+  const savedSets = getExerciseSets(log, item);
+  const rows = savedSets.map((saved, setIndex) => {
+    return `
+      <div class="set-row">
+        <div>${setIndex + 1}</div>
+        <div><input aria-label="${item.title} set ${setIndex + 1} weight" type="number" inputmode="decimal" min="0" step="2.5" placeholder="0" value="${saved.weight || ""}" data-field="weight" data-exercise="${item.id}" data-set="${setIndex}"></div>
+        <div><input aria-label="${item.title} set ${setIndex + 1} reps" type="number" inputmode="decimal" min="0" step="1" placeholder="${item.reps}" value="${saved.reps || ""}" data-field="reps" data-exercise="${item.id}" data-set="${setIndex}"></div>
+        <div><input aria-label="${item.title} set ${setIndex + 1} complete" type="checkbox" ${saved.done ? "checked" : ""} data-field="done" data-exercise="${item.id}" data-set="${setIndex}"></div>
+      </div>
+    `;
+  }).join("");
+
+  return `
+    <div class="set-controls">
+      <button type="button" data-add-set="${item.id}">+ Set</button>
+      <button type="button" data-remove-set="${item.id}" ${savedSets.length <= 1 ? "disabled" : ""}>Remove Set</button>
+    </div>
+    <div class="set-grid">
+      <div class="set-row header">
+        <div>Set</div>
+        <div>Weight</div>
+        <div>Reps</div>
+        <div>Done</div>
+      </div>
+      ${rows}
+    </div>
+  `;
+}
+
+function getExerciseSets(log, item) {
+  const defaultCount = Math.max(1, Number(item.sets) || 1);
+  if (!log.exercises[item.id]) log.exercises[item.id] = [];
+
+  while (log.exercises[item.id].length < defaultCount) {
+    log.exercises[item.id].push({});
+  }
+
+  return log.exercises[item.id];
+}
+
+function adjustSetCount(exerciseId, delta) {
+  const log = getWorkoutLog();
+  if (!log.exercises[exerciseId]) log.exercises[exerciseId] = [{}];
+
+  if (delta > 0) {
+    log.exercises[exerciseId].push({});
+  } else if (log.exercises[exerciseId].length > 1) {
+    log.exercises[exerciseId].pop();
+  }
+
+  persistWorkoutLog(log);
 }
 
 function subnav(title) {
@@ -554,11 +668,24 @@ function bindBack() {
   back.addEventListener("click", () => {
     if (state.section) {
       state.section = "";
+      state.openItem = "";
     } else {
       state.day = "";
     }
     renderWorkoutScreen();
   });
+}
+
+function updateSet(input) {
+  const log = getWorkoutLog();
+  const exerciseId = input.dataset.exercise;
+  const setIndex = input.dataset.set;
+  const field = input.dataset.field;
+
+  if (!log.exercises[exerciseId]) log.exercises[exerciseId] = [];
+  if (!log.exercises[exerciseId][setIndex]) log.exercises[exerciseId][setIndex] = {};
+  log.exercises[exerciseId][setIndex][field] = field === "done" ? input.checked : input.value;
+  persistWorkoutLog(log);
 }
 
 function renderWeight() {
