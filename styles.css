@@ -222,8 +222,16 @@ h3 {
 
 .subnav {
   display: grid;
-  gap: 12px;
+  gap: 8px;
   margin-bottom: 14px;
+}
+
+.day-context {
+  margin: 4px 0 -4px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 950;
+  text-transform: uppercase;
 }
 
 .back-button {

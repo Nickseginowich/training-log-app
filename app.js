@@ -124,10 +124,8 @@ const EXERCISE_IMAGES = {
   "pc-zone-2": "assets/workouts/zone-2-cardio.png",
   "pc-childs-pose-sat": "assets/workouts/childs-pose-breathing.png",
   "pc-hanging-decompression": "assets/workouts/hanging-decompression.png",
-  "pc-dead-bug-tue": "assets/mobility/03-dead-bug-native.png",
   "pc-dead-bug-wed": "assets/mobility/03-dead-bug-native.png",
-  "pc-9090-breathing-wed": "assets/mobility/01-hip-lift-native.png",
-  "pc-9090-finish": "assets/mobility/01-hip-lift-native.png"
+  "pc-9090-breathing-wed": "assets/mobility/01-hip-lift-native.png"
 };
 
 const PROGRAM = {
@@ -192,10 +190,6 @@ const PROGRAM = {
         ["Purpose", ["posture under load", "grip", "core stabilization"]],
         ["Execution", ["ribs down", "tall spine", "no side lean"]]
       ]),
-      exercise("pc-dead-bug-tue", "Dead Bug", "3", "8/side", "Core Finisher", [
-        ["Most important", ["low back pressed flat the entire time"]],
-        ["Execution", ["slow", "shorten range if back arches"]]
-      ]),
       exercise("pc-hollow-hold-tue", "Hollow Body Hold", "3", "20-30 sec", "Core Finisher", [
         ["Why", ["the hollow position IS posterior pelvic tilt under tension"]],
         ["Execution", ["low back pressed into floor", "ribs down", "arms and legs only as far as you can hold the flat back"]]
@@ -205,31 +199,31 @@ const PROGRAM = {
   Wednesday: {
     title: "Corrective Reset + Glute Pump",
     exercises: [
-      exercise("pc-couch-stretch-wed", "Couch Stretch", "2", "90 sec/side", "1. Release (Tight Side)", [
+      exercise("pc-couch-stretch-wed", "Couch Stretch", "2", "90 sec/side", "1. Release + Reposition", [
         ["Purpose", ["long-duration hip flexor opening", "the main restriction feeding your tilt"]],
         ["Execution", ["glute squeezed", "pelvis tucked before leaning", "breathe slowly"]]
       ]),
-      exercise("pc-ql-stretch", "Child's Pose + Knees-to-Chest", "2", "60 sec each", "1. Release (Tight Side)", [
+      exercise("pc-ql-stretch", "Child's Pose + Knees-to-Chest", "2", "60 sec each", "1. Release + Reposition", [
         ["Purpose", ["unload lumbar erectors and QL"]],
         ["Execution", ["long exhales", "let the low back round gently"]]
       ]),
-      exercise("pc-9090-breathing-wed", "90/90 Breathing (Feet on Wall)", "2", "5 breaths", "2. Reposition", [
+      exercise("pc-9090-breathing-wed", "90/90 Breathing (Feet on Wall)", "2", "5 breaths", "1. Release + Reposition", [
         ["Purpose", ["restack ribs over pelvis", "turn hamstrings and abs on"]],
         ["Execution", ["full 5-6 sec exhale", "pause", "quiet nasal inhale"]]
       ]),
-      exercise("pc-dead-bug-wed", "Dead Bug", "3", "8/side", "3. Activate (Weak Side)", [
+      exercise("pc-dead-bug-wed", "Dead Bug", "3", "8/side", "2. Activate (Weak Side)", [
         ["Most important", ["low back stays pressed flat the entire time"]],
         ["Execution", ["slow", "shorten range if back arches"]]
       ]),
-      exercise("pc-hollow-hold-wed", "Hollow Body Hold", "3", "20-30 sec", "3. Activate (Weak Side)", [
+      exercise("pc-hollow-hold-wed", "Hollow Body Hold", "3", "20-30 sec", "2. Activate (Weak Side)", [
         ["Why", ["posterior pelvic tilt under tension", "directly loads your new position"]],
         ["Execution", ["low back pressed into floor", "ribs down", "shorten the lever if the back lifts"]]
       ]),
-      exercise("pc-banded-hip-thrust", "Banded Hip Thrust (Tilt Focus)", "3", "15", "3. Activate (Weak Side)", [
+      exercise("pc-banded-hip-thrust", "Banded Hip Thrust (Tilt Focus)", "3", "15", "2. Activate (Weak Side)", [
         ["Purpose", ["high-rep glute pump in posterior tilt"]],
         ["Execution", ["tuck pelvis first", "squeeze 2 sec at top", "ribs down"]]
       ]),
-      exercise("pc-wall-tilt-drill", "Standing Wall Tilt Hold", "3", "60 sec", "4. Integrate", [
+      exercise("pc-wall-tilt-drill", "Standing Wall Tilt Hold", "3", "60 sec", "3. Integrate", [
         ["Why this matters most", ["this is your new default standing posture", "practice it until it is automatic"]],
         ["Execution", ["flatten low back toward wall", "step away and hold the position", "breathe normally"]]
       ])
@@ -238,30 +232,30 @@ const PROGRAM = {
   Thursday: {
     title: "Lower Body — Glute + Hamstring Priority",
     exercises: [
-      exercise("pc-barbell-hip-thrust", "Barbell Hip Thrust", "4", "8-10", "A. Primary (Glutes First)", [
-        ["Why first", ["glutes are the #1 muscle that pulls your pelvis back to neutral", "train them freshest"]],
-        ["Most important", ["posterior tilt at top", "no lumbar arch", "ribs down"]]
-      ]),
-      exercise("pc-rdl", "Romanian Deadlift", "4", "8", "A. Primary (Glutes First)", [
-        ["Why", ["builds hamstrings at length — the muscles that anchor your pelvis from behind"]],
-        ["Execution", ["hinge, do not squat it", "flat back, soft knees", "stand up with glutes, no arch at lockout"]]
-      ]),
-      exercise("pc-bulgarian-split-squats", "Bulgarian Split Squats (Glute Bias)", "3", "8/leg", "B. Secondary", [
-        ["Purpose", ["single-leg glute strength", "pelvic control"]],
-        ["Execution", ["slight forward torso lean", "pelvis tucked", "push through heel"]]
-      ]),
-      exercise("pc-hamstring-curls", "Hamstring Curls", "3", "12", "B. Secondary", [
-        ["Purpose", ["direct hamstring volume", "pelvic stabilizers"]]
-      ]),
-      exercise("pc-goblet-squats", "Goblet Squats", "3", "8", "B. Secondary", [
+      exercise("pc-goblet-squats", "Goblet Squats", "3", "8", "1. Squat + Hinge", [
         ["Purpose", ["quad strength kept in the program, demoted from priority"]],
         ["Execution", ["brace with slight tuck", "no butt-wink chasing depth"]]
       ]),
-      exercise("pc-reverse-crunch-thu", "Reverse Crunches", "3", "12-15", "C. Core", [
+      exercise("pc-rdl", "Romanian Deadlift", "4", "8", "1. Squat + Hinge", [
+        ["Why", ["builds hamstrings at length — the muscles that anchor your pelvis from behind"]],
+        ["Execution", ["hinge, do not squat it", "flat back, soft knees", "stand up with glutes, no arch at lockout"]]
+      ]),
+      exercise("pc-bulgarian-split-squats", "Bulgarian Split Squats (Glute Bias)", "3", "8/leg", "2. Bulgarian Split Squats", [
+        ["Purpose", ["single-leg glute strength", "pelvic control"]],
+        ["Execution", ["slight forward torso lean", "pelvis tucked", "push through heel"]]
+      ]),
+      exercise("pc-barbell-hip-thrust", "Barbell Hip Thrust", "4", "8-10", "3. Hip Thrusts", [
+        ["Why first", ["glutes are the #1 muscle that pulls your pelvis back to neutral", "train them freshest"]],
+        ["Most important", ["posterior tilt at top", "no lumbar arch", "ribs down"]]
+      ]),
+      exercise("pc-hamstring-curls", "Hamstring Curls", "3", "12", "4. Hamstring Curls", [
+        ["Purpose", ["direct hamstring volume", "pelvic stabilizers"]]
+      ]),
+      exercise("pc-reverse-crunch-thu", "Reverse Crunches", "3", "12-15", "5. Core", [
         ["Purpose", ["end every lower day owning posterior tilt"]],
         ["Execution", ["slow eccentric", "no momentum"]]
       ]),
-      exercise("pc-knee-raises-thu", "Hanging Knee Raises with Pelvic Curl", "3", "10-12", "C. Core", [
+      exercise("pc-knee-raises-thu", "Hanging Knee Raises with Pelvic Curl", "3", "10-12", "5. Core", [
         ["Why", ["the pelvic curl at the top is the rep — knees up alone is hip flexors"]],
         ["Execution", ["knees up, then curl pelvis toward ribs", "slow lower", "no swinging"]]
       ])
@@ -271,12 +265,12 @@ const PROGRAM = {
     title: "Athletic Full Body (Posture-Safe)",
     exercises: [
       superset("pc-athletic-circuit", "Posture-Safe Athletic Circuit", [
-        exercise("pc-circuit-sled-push", "Sled Push", "5", "20 yards", "Circuit"),
         exercise("pc-circuit-inverted-rows", "Inverted Rows", "5", "10-12", "Circuit", [
           ["Why not pullups", ["horizontal pull with the body held as a rigid plank", "no lat-driven arching when fatigued"]],
           ["Execution", ["glutes squeezed", "straight line head to heels", "ribs down"]]
         ]),
         exercise("pc-circuit-pushups", "Pushups (Ribs Down)", "5", "15-20", "Circuit"),
+        exercise("pc-circuit-sled-push", "Sled Push/Pull", "5", "20 yards", "Circuit"),
         exercise("pc-circuit-reverse-lunges", "Reverse Lunges", "5", "10/leg", "Circuit", [
           ["Why reverse", ["easier to keep pelvis tucked than walking lunges"]]
         ]),
@@ -294,7 +288,7 @@ const PROGRAM = {
   Saturday: {
     title: "Zone 2 + Decompression",
     exercises: [
-      exercise("pc-zone-2", "Zone 2 Cardio", "1", "30-45 min", "Conditioning", [
+      exercise("pc-zone-2", "Zone 2 Incline Walk", "1", "30-45 min", "Conditioning", [
         ["Best mode", ["incline treadmill walk — every stride is free hip-extension work"]],
         ["Also fine", ["rower"]],
         ["Minimize", ["long bike sessions — 45 min of hip flexion feeds the tight hip flexors"]],
@@ -313,9 +307,6 @@ const PROGRAM = {
       exercise("pc-wall-tilt-sat", "Standing Wall Tilt Hold", "3", "60 sec", "Posture Practice", [
         ["Purpose", ["rehearse your new default standing position"]],
         ["Execution", ["flatten low back toward wall", "step away", "hold and breathe"]]
-      ]),
-      exercise("pc-9090-finish", "90/90 Breathing Finish", "2", "5 breaths", "Reset", [
-        ["Execution", ["full exhale", "ribs down", "quiet inhale"]]
       ])
     ]
   }
@@ -664,6 +655,7 @@ function subnav(title) {
   return `
     <div class="subnav">
       <button class="back-button" type="button" data-back>Back</button>
+      ${state.day && title !== state.day ? `<p class="day-context">${state.day}</p>` : ""}
       <h2>${title}</h2>
     </div>
   `;

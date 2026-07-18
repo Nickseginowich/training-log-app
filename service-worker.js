@@ -1,4 +1,4 @@
-const CACHE_VERSION = "2026-07-18-section-checklists";
+const CACHE_VERSION = "2026-07-18-weekly-program-update";
 const CACHE_NAME = `training-log-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
