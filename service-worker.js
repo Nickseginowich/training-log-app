@@ -1,4 +1,4 @@
-const CACHE_VERSION = "2026-07-15-posture-v2";
+const CACHE_VERSION = "2026-07-17-workout-cards";
 const CACHE_NAME = `training-log-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
@@ -15,7 +15,16 @@ const APP_SHELL = [
   "./assets/mobility/04-glute-bridge-native.png",
   "./assets/mobility/05-wall-slides-native.png",
   "./assets/mobility/06-adductor-rockback-native.png",
-  "./assets/mobility/07-open-book-native.png"
+  "./assets/mobility/07-open-book-native.png",
+  "./assets/workouts/rkc-plank.png",
+  "./assets/workouts/reverse-crunch.png",
+  "./assets/workouts/landmine-press.png",
+  "./assets/workouts/ring-pushup.png",
+  "./assets/workouts/face-pull.png",
+  "./assets/workouts/kb-swing.png",
+  "./assets/workouts/couch-stretch.png",
+  "./assets/workouts/wall-tilt.png",
+  "./assets/workouts/hanging-knee-raise.png"
 ];
 
 self.addEventListener("install", (event) => {
