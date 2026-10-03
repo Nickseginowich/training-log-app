@@ -1,0 +1,86 @@
+{
+  "generator": "Built-in image generation",
+  "date": "2026-10-03",
+  "style": "Generate one 1672x941 landscape PNG instructional fitness illustration, realistic soft studio rendering. Athletic adult man, short dark hair, charcoal t-shirt, slate-blue shorts, white socks, black trainers. Warm off-white seamless background, dark mat for floor work. Full body and equipment comfortably framed, natural neutral spine, no text, no collage. ",
+  "prompts": [
+    [
+      "incline-dumbbell-press",
+      "Low incline dumbbell press bottom position, bench 25 degrees, feet grounded, upper back supported, dumbbells near chest, elbows 45 degrees from torso forearms vertical. Three-quarter side view entire bench visible."
+    ],
+    [
+      "push-up-plus",
+      "Top of push-up PLUS. Straight elbows hands shoulder width, shoulder blades wrap forward around ribs, broad upper back but straight controlled trunk to heels, full side three-quarter view."
+    ],
+    [
+      "prone-y-raise",
+      "Prone Y raise chest supported on low incline bench, arms overhead outwards in Y, thumbs up, tiny dumbbells. Elevated three-quarter from head side clearly shows Y, long neck, feet grounded."
+    ],
+    [
+      "front-squat",
+      "Barbell front squat at controlled bottom, front rack on shoulders, fingertips under bar, elbows high, heels planted, knees tracking toes. Full body and entire bar, upright neutral braced torso."
+    ],
+    [
+      "side-plank",
+      "Straight-leg forearm side plank on mat. Elbow under shoulder, feet stacked, hips lifted, straight line head shoulders hips ankles. Free hand on hip."
+    ],
+    [
+      "cable-row-reach",
+      "Standing one-arm cable row with reach, staggered stance, arm reaches toward cable in front at lower chest height, shoulder blade naturally glides forward, other arm relaxed, torso square and still. Visible cable connection and machine pulley."
+    ],
+    [
+      "band-external-rotation",
+      "Standing one-arm band external rotation. Working elbow held against ribs bent 90 degrees with small towel at side, forearm rotated outward, hand holds band connected horizontally to anchor on opposite side. Torso still neutral. Full body and band anchor."
+    ],
+    [
+      "front-rack-carry",
+      "Walking upright carrying TWO kettlebells front rack, each rests outer forearm beside shoulder chest, elbows near ribs, neutral wrists, no leaning back. Full body and weights."
+    ],
+    [
+      "trap-bar-deadlift",
+      "Man standing INSIDE hexagonal trap bar, both hands grip side neutral handles, mid deadlift hips knees slightly bent, neutral back. Entire hex bar surrounding feet clearly visible, weight plates at both sides, no backward lean."
+    ],
+    [
+      "step-up",
+      "Dumbbell step-up on sturdy low gym box. Entire working foot on box, knee bent tracking foot, opposite foot lifting from floor, upright torso level pelvis, two dumbbells at sides. Full body and box."
+    ],
+    [
+      "single-leg-rdl",
+      "Single-leg Romanian deadlift. One standing leg slightly bent, torso hinged near horizontal, free leg straight extended behind aligned with torso, square pelvis, two dumbbells hanging under shoulders. Neutral neck back. Full side three-quarter view."
+    ],
+    [
+      "pallof-press",
+      "Standing Pallof press end position. Both hands together holding band handle in front of sternum arms fully extended forward. Band runs horizontally SIDEWAYS to anchor at subject's left perpendicular to facing direction. Soft knees shoulder width feet, torso square resisting rotation. Full body."
+    ],
+    [
+      "copenhagen-plank",
+      "Short-lever Copenhagen side plank. Upper bent knee and inner thigh resting on bench, lower forearm on floor elbow under shoulder, lower leg lifted, hips high neutral straight trunk, free hand on hip. Full body bench mat, clear side view."
+    ],
+    [
+      "bear-crawl",
+      "Bear crawl with knees bent 90 degrees hovering an inch above floor, hands beneath shoulders, neutral flat back, hips level, small opposite hand foot step. No pike or sag, full body on mat."
+    ],
+    [
+      "walking-lunge",
+      "Dumbbell walking lunge mid-stride, front foot planted knee 90 degrees, rear knee hovering floor heel lifted, dumbbells one per hand at sides, upright stacked torso pelvis square. Full body and both feet."
+    ],
+    [
+      "thoracic-foam-roller",
+      "Side view supine thoracic extension over roller at upper/mid back, hips on mat knees bent feet planted hands support head, lower ribs controlled."
+    ],
+    [
+      "deep-neck-flexor-nod",
+      "Side view supine tiny chin nod, head supported on mat not lifted, knees bent, arms relaxed."
+    ]
+  ],
+  "revisions": [
+    {
+      "file": "step-up.png",
+      "prompt": "Reframe the entire scene smaller with empty space above the head and below the mat; retain model, pose, outfit and equipment."
+    },
+    {
+      "file": "pull-up.png",
+      "reference": "weighted-pullup.png",
+      "prompt": "Remove weight belt, chain and plate from existing pull-up image; retain bodyweight pull-up form, equipment, model and style."
+    }
+  ]
+}

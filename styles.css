@@ -504,7 +504,82 @@ h3 {
 }
 
 .workout-header p {
-  font-size: 26px;
+  font-size: 27px;
+}
+
+.daily-sections {
+  display: grid;
+  gap: 16px;
+}
+
+.day-section {
+  min-width: 0;
+}
+
+.day-section > summary {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 18px;
+  align-items: start;
+  gap: 10px;
+  padding: 18px 14px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: 8px;
+  background: var(--surface);
+  cursor: pointer;
+  list-style: none;
+}
+
+.day-section > summary::-webkit-details-marker {
+  display: none;
+}
+
+.day-section > summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.day-section[open] > summary .section-chevron {
+  transform: rotate(90deg);
+}
+
+.day-workout-title {
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.section-body {
+  padding-top: 14px;
+}
+
+.posture-cue {
+  margin: 0 0 14px;
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.program-guidance {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  margin-top: 24px;
+}
+
+.training-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.section-copy,
+.mobility-header,
+.pill,
+.set-check {
+  overflow-wrap: anywhere;
 }
 
 .workout-content {

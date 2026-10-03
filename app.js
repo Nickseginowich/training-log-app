@@ -1,313 +1,346 @@
 const MOBILITY_ROUTINE = [
   {
-    id: "hip-lift",
-    title: "90/90 Hip Lift Breathing",
-    subtitle: "IMPORTANT: use the version with feet on wall",
-    image: "assets/mobility/01-hip-lift-native.png",
-    dose: "2 sets x 5 breaths",
-    sections: [
-      ["Do", ["Full exhale through mouth for 5-6 sec", "Feel ribs come down", "Pause 2 sec", "Inhale through nose quietly"]],
-      ["Feel", ["hamstrings", "abs", "less pressure in low back"]],
-      ["Avoid", ["quads", "hip flexors"]]
+    "id": "hip-lift",
+    "title": "90/90 Wall Breathing",
+    "subtitle": "Feet on wall",
+    "image": "assets/mobility/01-hip-lift-native.png",
+    "dose": "2 sets x 5 slow breaths",
+    "sections": [
+      [
+        "Setup",
+        [
+          "Lie on your back, feet on wall, hips and knees around 90 degrees.",
+          "Gently draw heels down without sliding; feel the hamstrings engage."
+        ]
+      ],
+      [
+        "Focus",
+        [
+          "Stack ribs over pelvis with hamstrings and deep abs."
+        ]
+      ],
+      [
+        "Cues",
+        [
+          "Exhale slowly through your mouth; let lower ribs settle.",
+          "Pause, then inhale quietly into the sides and back of your ribs.",
+          "Allow a small, comfortable pelvic motion."
+        ]
+      ],
+      [
+        "Avoid",
+        [
+          "Forcing your low back flat or pushing hard into the wall.",
+          "Neck tension and lifting your chest to breathe."
+        ]
+      ],
+      [
+        "Feel",
+        [
+          "Hamstrings and deep abs; expansion through back and side ribs."
+        ]
+      ]
     ]
   },
   {
-    id: "hip-flexor",
-    title: "Half-Kneeling Hip Flexor Stretch",
-    subtitle: "THIS exact version",
-    image: "assets/mobility/02-hip-flexor-native.png",
-    dose: "45 sec each side",
-    sections: [
-      ["Most important", ["Before leaning forward: squeeze glute of kneeling leg", "Tuck pelvis slightly", "Then gently move hips forward"]],
-      ["Do not", ["arch low back", "lean excessively"]],
-      ["Feel", ["front of hip/thigh stretching"]]
+    "id": "dead-bug",
+    "title": "Dead Bug",
+    "subtitle": "Slow, controlled reach",
+    "image": "assets/mobility/03-dead-bug-native.png",
+    "dose": "1 set x 6 reps/side",
+    "sections": [
+      [
+        "Setup",
+        [
+          "Lie on your back with arms vertical and hips/knees around 90 degrees."
+        ]
+      ],
+      [
+        "Focus",
+        [
+          "Move your limbs while your trunk stays stable."
+        ]
+      ],
+      [
+        "Cues",
+        [
+          "Slowly reach opposite arm and leg; exhale as you reach.",
+          "Return under control and alternate sides.",
+          "Shorten the reach before your back begins to arch."
+        ]
+      ],
+      [
+        "Avoid",
+        [
+          "Rushing or reaching beyond your control."
+        ]
+      ],
+      [
+        "Feel",
+        [
+          "Abs working without an increase in low-back arch."
+        ]
+      ]
     ]
   },
   {
-    id: "dead-bug",
-    title: "Dead Bug",
-    subtitle: "THIS exact controlled version",
-    image: "assets/mobility/03-dead-bug-native.png",
-    dose: "2 sets x 8 per side",
-    sections: [
-      ["Movement", ["Slowly extend opposite arm + leg", "Return", "Alternate sides"]],
-      ["Most important", ["Your low back cannot arch", "If it arches, shorten the range"]],
-      ["Tempo", ["slow and controlled"]]
+    "id": "hip-flexor",
+    "title": "Half-Kneeling Hip-Flexor Mobilization",
+    "subtitle": "Controlled hip movement",
+    "image": "assets/mobility/02-hip-flexor-native.png",
+    "dose": "8 controlled reps/side",
+    "sections": [
+      [
+        "Setup",
+        [
+          "One knee down, opposite foot forward, torso tall."
+        ]
+      ],
+      [
+        "Focus",
+        [
+          "Move through the hip without arching your low back."
+        ]
+      ],
+      [
+        "Cues",
+        [
+          "Lightly engage the glute on your kneeling side.",
+          "Use a small pelvic tuck, glide hips forward, then return.",
+          "Keep ribs stacked and move slowly."
+        ]
+      ],
+      [
+        "Avoid",
+        [
+          "Leaning backward, rib flare or forcing a large stretch."
+        ]
+      ],
+      [
+        "Feel",
+        [
+          "A gentle stretch at the front of the kneeling-side hip/thigh."
+        ]
+      ]
     ]
   },
   {
-    id: "glute-bridge",
-    title: "Glute Bridge with Posterior Pelvic Tilt",
-    subtitle: "Not the hyperextended version",
-    image: "assets/mobility/04-glute-bridge-native.png",
-    dose: "2 sets x 12",
-    sections: [
-      ["Before lifting", ["tuck pelvis slightly", "flatten low back slightly", "then bridge up"]],
-      ["At top", ["squeeze glutes", "ribs stay down", "do not arch back"]],
-      ["Feel", ["glutes", "not low back"]]
+    "id": "pf-thoracic-roller",
+    "title": "Thoracic Extension Over Foam Roller",
+    "subtitle": "Upper and mid-back mobility",
+    "image": "assets/workouts/thoracic-foam-roller.png",
+    "dose": "6 controlled reps",
+    "sections": [
+      [
+        "Setup",
+        [
+          "Place the roller across your upper/mid back, feet planted; support your head with your hands."
+        ]
+      ],
+      [
+        "Focus",
+        [
+          "Let movement come from the upper back, with lower ribs controlled."
+        ]
+      ],
+      [
+        "Cues",
+        [
+          "Gently extend over the roller, then return.",
+          "Shift the roller slightly to an adjacent upper-back segment if needed."
+        ]
+      ],
+      [
+        "Avoid",
+        [
+          "Cranking your neck, flaring ribs or making a large low-back arch."
+        ]
+      ],
+      [
+        "Feel",
+        [
+          "Gentle opening through the upper and mid back."
+        ]
+      ]
     ]
   },
   {
-    id: "wall-slides",
-    title: "Serratus Wall Slides",
-    subtitle: "Exact wall version",
-    image: "assets/mobility/05-wall-slides-native.png",
-    dose: "2 sets x 12",
-    sections: [
-      ["Movement", ["Slowly slide arms upward", "Reach slightly at top"]],
-      ["Do not", ["arch low back", "flare ribs"]],
-      ["Feel", ["side of ribs", "upper abs", "serratus muscles"]]
+    "id": "wall-slides",
+    "title": "Serratus Wall Slide",
+    "subtitle": "Slide and reach",
+    "image": "assets/mobility/05-wall-slides-native.png",
+    "dose": "1 set x 10 reps",
+    "sections": [
+      [
+        "Setup",
+        [
+          "Forearms against the wall with light pressure; ribs stacked."
+        ]
+      ],
+      [
+        "Focus",
+        [
+          "Serratus activation and smooth shoulder-blade upward rotation."
+        ]
+      ],
+      [
+        "Cues",
+        [
+          "Slide arms upward and reach slightly into the wall.",
+          "Allow your shoulder blades to rotate naturally."
+        ]
+      ],
+      [
+        "Avoid",
+        [
+          "Shrugging, pinning shoulder blades together or arching your low back."
+        ]
+      ],
+      [
+        "Feel",
+        [
+          "Side ribs and underarm muscles, with light upper-back activation."
+        ]
+      ]
     ]
   },
   {
-    id: "adductor-rockback",
-    title: "Adductor Rockback",
-    subtitle: "THIS version",
-    image: "assets/mobility/06-adductor-rockback-native.png",
-    dose: "10 each side",
-    sections: [
-      ["Movement", ["Sit hips backward slowly", "Return"]],
-      ["Keep", ["spine neutral", "ribs down"]],
-      ["Feel", ["inner thigh/groin mobility"]]
-    ]
-  },
-  {
-    id: "open-book",
-    title: "Open Book Thoracic Rotations",
-    subtitle: "THIS exact version",
-    image: "assets/mobility/07-open-book-native.png",
-    dose: "10 each side",
-    sections: [
-      ["Movement", ["Rotate upper arm across body", "Open chest toward opposite side"]],
-      ["Keep", ["knees stacked", "low back stable"]],
-      ["Feel", ["upper/mid back rotation", "not low back twisting"]]
+    "id": "pf-neck-nod",
+    "title": "Deep-Neck-Flexor Nod",
+    "subtitle": "Small nod, relaxed neck",
+    "image": "assets/workouts/deep-neck-flexor-nod.png",
+    "dose": "8 reps x about 5-sec hold",
+    "sections": [
+      [
+        "Setup",
+        [
+          "Lie on your back with your head supported and relaxed."
+        ]
+      ],
+      [
+        "Focus",
+        [
+          "Deep neck control and endurance."
+        ]
+      ],
+      [
+        "Cues",
+        [
+          "Make a tiny 'yes' nod and lengthen the back of your neck.",
+          "Hold about 5 seconds; release gently.",
+          "Keep your head resting on its support."
+        ]
+      ],
+      [
+        "Avoid",
+        [
+          "Lifting your head, jamming your chin down or straining your neck."
+        ]
+      ]
     ]
   }
 ];
 
 const EXERCISE_IMAGES = {
-  "pc-weighted-pullups": "assets/workouts/weighted-pullup.png",
-  "pc-rkc-plank": "assets/workouts/rkc-plank.png",
-  "pc-reverse-crunches": "assets/workouts/reverse-crunch.png",
-  "pc-reverse-crunch-thu": "assets/workouts/reverse-crunch.png",
-  "pc-landmine-press": "assets/workouts/landmine-press.png",
+  "pf-incline-press-mon": "assets/workouts/incline-dumbbell-press.png",
   "pc-chest-supported-rows": "assets/workouts/chest-supported-row.png",
-  "pc-ring-pushups": "assets/workouts/ring-pushup.png",
-  "pc-face-pulls": "assets/workouts/face-pull.png",
-  "pc-cable-crunch": "assets/workouts/cable-crunch.png",
+  "pc-landmine-press": "assets/workouts/landmine-press.png",
+  "pf-pushup-plus-mon": "assets/workouts/push-up-plus.png",
+  "pf-prone-y-mon": "assets/workouts/prone-y-raise.png",
   "pc-suitcase-carry": "assets/workouts/suitcase-carry.png",
-  "pc-sled-push": "assets/workouts/sled-push.png",
-  "pc-backward-sled-drag": "assets/workouts/backward-sled-drag.png",
-  "pc-kb-swings": "assets/workouts/kb-swing.png",
-  "pc-farmer-carries": "assets/workouts/farmer-carry.png",
-  "pc-hollow-hold-tue": "assets/workouts/hollow-body-hold.png",
-  "pc-couch-stretch-wed": "assets/workouts/couch-stretch.png",
-  "pc-ql-stretch": "assets/workouts/childs-pose-knees-to-chest.png",
-  "pc-hollow-hold-wed": "assets/workouts/hollow-body-hold.png",
-  "pc-banded-hip-thrust": "assets/workouts/banded-hip-thrust.png",
-  "pc-couch-stretch-sat": "assets/workouts/couch-stretch.png",
-  "pc-wall-tilt-drill": "assets/workouts/wall-tilt.png",
-  "pc-wall-tilt-sat": "assets/workouts/wall-tilt.png",
-  "pc-barbell-hip-thrust": "assets/workouts/barbell-hip-thrust.png",
+  "pf-front-squat-tue": "assets/workouts/front-squat.png",
   "pc-rdl": "assets/workouts/romanian-deadlift.png",
   "pc-bulgarian-split-squats": "assets/workouts/bulgarian-split-squat.png",
+  "pc-barbell-hip-thrust": "assets/workouts/barbell-hip-thrust.png",
   "pc-hamstring-curls": "assets/workouts/hamstring-curl.png",
-  "pc-goblet-squats": "assets/workouts/goblet-squat.png",
-  "pc-circuit-sled-push": "assets/workouts/sled-push.png",
-  "pc-circuit-inverted-rows": "assets/workouts/inverted-row.png",
-  "pc-circuit-pushups": "assets/workouts/pushup.png",
+  "pf-dead-bug-tue": "assets/mobility/03-dead-bug-native.png",
+  "pf-side-plank-tue": "assets/workouts/side-plank.png",
+  "pf-incline-press-thu": "assets/workouts/incline-dumbbell-press.png",
+  "pf-cable-row-thu": "assets/workouts/cable-row-reach.png",
+  "pf-landmine-thu": "assets/workouts/landmine-press.png",
+  "pf-wall-slide-thu": "assets/mobility/05-wall-slides-native.png",
+  "pf-prone-y-thu": "assets/workouts/prone-y-raise.png",
+  "pf-external-rotation-thu": "assets/workouts/band-external-rotation.png",
+  "pf-neck-nod-thu": "assets/workouts/deep-neck-flexor-nod.png",
+  "pf-front-rack-thu": "assets/workouts/front-rack-carry.png",
+  "pf-trap-bar-fri": "assets/workouts/trap-bar-deadlift.png",
   "pc-circuit-reverse-lunges": "assets/workouts/reverse-lunge.png",
-  "pc-circuit-knee-raises": "assets/workouts/hanging-knee-raise.png",
-  "pc-circuit-banded-hip-thrust": "assets/workouts/banded-hip-thrust.png",
-  "pc-circuit-suitcase-carry": "assets/workouts/suitcase-carry.png",
-  "pc-knee-raises-thu": "assets/workouts/hanging-knee-raise.png",
-  "pc-zone-2": "assets/workouts/zone-2-cardio.png",
-  "pc-childs-pose-sat": "assets/workouts/childs-pose-breathing.png",
-  "pc-hanging-decompression": "assets/workouts/hanging-decompression.png",
-  "pc-dead-bug-wed": "assets/mobility/03-dead-bug-native.png",
-  "pc-9090-breathing-wed": "assets/mobility/01-hip-lift-native.png"
+  "pf-step-up-fri": "assets/workouts/step-up.png",
+  "pf-single-rdl-fri": "assets/workouts/single-leg-rdl.png",
+  "pf-pallof-fri": "assets/workouts/pallof-press.png",
+  "pf-copenhagen-fri": "assets/workouts/copenhagen-plank.png",
+  "pf-sled-fri": "assets/workouts/sled-push.png",
+  "pf-farmer-sat": "assets/workouts/farmer-carry.png",
+  "pf-bear-sat": "assets/workouts/bear-crawl.png",
+  "pf-walking-lunge-sat": "assets/workouts/walking-lunge.png",
+  "pf-pushup-plus-sat": "assets/workouts/push-up-plus.png",
+  "pf-pullup-sat": "assets/workouts/pull-up.png",
+  "pf-sled-combo-sat": [
+    "assets/workouts/sled-push.png",
+    "assets/workouts/backward-sled-drag.png"
+  ],
+  "pc-zone-2": "assets/workouts/zone-2-cardio.png"
 };
 
 const PROGRAM = {
   Monday: {
-    title: "Upper Strength + Anti-Extension",
+    title: "Upper Body - Chest + Scapular Control",
     exercises: [
-      exercise("pc-weighted-pullups", "Weighted Pull-ups", "4", "5-8", "A. Strength", [
-        ["Goal", ["upper strength without arching into extension"]],
-        ["Execution", ["ribs down", "slight posterior tilt at the bottom", "no swinging"]]
-      ]),
-      exercise("pc-landmine-press", "Landmine Press", "4", "8", "A. Strength", [
-        ["Why", ["pressing without leaning back or flaring ribs"]],
-        ["Execution", ["glutes squeezed", "ribs stacked over pelvis", "exhale as you press"]]
-      ]),
-      exercise("pc-chest-supported-rows", "Chest-supported Rows", "4", "10", "B. Posture / Control", [
-        ["Purpose", ["upper-back strength with zero low-back load"]],
-        ["Execution", ["pause at the top", "no shrugging", "chest stays glued to pad"]]
-      ]),
-      exercise("pc-ring-pushups", "Ring Pushups", "3", "12", "B. Posture / Control", [
-        ["Purpose", ["serratus control", "anti-extension under load"]],
-        ["Execution", ["hard RKC-style body line", "ribs down", "reach at the top"]]
-      ]),
-      exercise("pc-face-pulls", "Face Pulls", "3", "15", "B. Posture / Control", [
-        ["Purpose", ["rear delts", "scap control"]],
-        ["Execution", ["high elbows", "do not arch to finish reps"]]
-      ]),
-      exercise("pc-reverse-crunches", "Reverse Crunches", "3", "12-15", "C. Core (Tilt Drivers)", [
-        ["Why", ["directly trains posterior pelvic tilt", "the #1 core pattern for your fix"]],
-        ["Execution", ["curl pelvis toward ribs", "slow lower", "no leg-swing momentum"]]
-      ]),
-      exercise("pc-rkc-plank", "RKC Plank", "3", "20-30 sec", "C. Core (Tilt Drivers)", [
-        ["Purpose", ["max-tension anti-extension", "glutes + abs co-contraction"]],
-        ["Execution", ["posterior tilt", "squeeze glutes hard", "pull elbows toward toes"]]
-      ]),
-      exercise("pc-cable-crunch", "Cable or Kneeling Crunch", "3", "12-15", "C. Core (Tilt Drivers)", [
-        ["Why", ["loaded trunk flexion", "directly strengthens the abs that posterior-tilt your pelvis"]],
-        ["Execution", ["curl ribs toward pelvis", "round the upper back", "hips stay still — no hip flexor takeover"]]
-      ]),
-      exercise("pc-suitcase-carry", "Suitcase Carry", "3", "40 yards/side", "C. Core (Tilt Drivers)", [
-        ["Purpose", ["standing core control", "trains your new posture under load"]],
-        ["Execution", ["ribs stacked", "do not lean or arch", "walk tall"]]
-      ])
+      exercise("pf-incline-press-mon", "Incline Dumbbell Press", "4", "6-8", "Workout", [["Focus",["Chest strength with controlled ribs and a natural lumbar curve."]],["Cues",["Set bench around 20-30 degrees; plant your feet.","Support your upper back and keep ribs controlled.","Lower smoothly, then press without forcing your shoulders down."]],["Avoid",["A large low-back arch or shoulders rolling forward at the bottom."]],["Rest",["2-3 min"]]]),
+      exercise("pc-chest-supported-rows", "Chest-Supported Row", "3", "8-10", "Workout", [["Focus",["Scapular control through a smooth row."]],["Cues",["Let shoulder blades glide forward naturally at the bottom.","Row smoothly; retract without aggressively pinching.","Keep your chest supported and neck long."]],["Avoid",["Jerking, shrugging or keeping shoulder blades pinned back."]],["Rest",["90-120 sec"]]]),
+      exercise("pc-landmine-press", "Half-Kneeling Landmine Press", "3", "8/side", "Workout", [["Focus",["Pressing strength, serratus and upward rotation."]],["Cues",["Use a half-kneeling stance; lightly engage the kneeling-side glute.","Stack ribs over pelvis.","Press up and forward; reach naturally at the top."]],["Avoid",["Leaning backward, rib flare or a low-back arch."]],["Rest",["60-90 sec between sides/sets"]]]),
+      exercise("pf-pushup-plus-mon", "Push-Up Plus", "3", "10-15", "Workout", [["Focus",["Serratus strength and shoulder-blade control."]],["Cues",["Perform a controlled push-up.","At the top, push the floor slightly farther away.","Let shoulder blades wrap around your ribs; keep your trunk controlled."]],["Avoid",["Shrugging, collapsing between shoulder blades or rounding your entire spine."]],["Rest",["60-90 sec"]]]),
+      exercise("pf-prone-y-mon", "Prone Y Raise", "3", "10-15", "Workout", [["Focus",["Lower-trap strength and scapular upward rotation."]],["Cues",["Use very light weights, arms in a Y.","Keep thumbs up or neutral; reach long.","Keep your neck relaxed and trunk supported."]],["Avoid",["Shrugging or arching your low back to lift the arms."]],["Rest",["60 sec"]]]),
+      exercise("pc-suitcase-carry", "Suitcase Carry", "3", "30-40 m/side", "Workout", [["Focus",["Lateral trunk strength and upright posture under load."]],["Cues",["Carry a dumbbell or kettlebell in one hand.","Walk normally, ribs stacked over pelvis.","Keep your head level and shoulders relaxed."]],["Avoid",["Side bending, shrugging the loaded shoulder or short choppy steps."]],["Rest",["60-90 sec"]]])
     ]
   },
   Tuesday: {
-    title: "Power + Carries (Posture-Safe)",
+    title: "Lower Body - Pelvis + Posterior Chain",
     exercises: [
-      exercise("pc-sled-push", "Heavy Sled Push", "5", "20 yards", "Power", [
-        ["Purpose", ["posterior chain power with zero spinal extension"]],
-        ["Note", ["sprints are paused until your tilt is fixed — sprinting trains the exact pattern we're erasing", "sled work replaces them with none of the downside"]],
-        ["Execution", ["45-degree body line", "drive through whole foot"]]
-      ]),
-      exercise("pc-backward-sled-drag", "Backward Sled Drag", "4", "20 yards", "Power", [
-        ["Why", ["trains quads with zero lumbar extension", "the position is naturally posterior-tilted"]],
-        ["Execution", ["stay low", "small quick steps", "ribs down the whole way"]]
-      ]),
-      exercise("pc-kb-swings", "Kettlebell Swings", "4", "12", "Power", [
-        ["Purpose", ["explosive hip hinge", "glute snap finish"]],
-        ["Most important", ["finish with glutes + posterior tilt, not a back arch", "if you feel low back, stop and reset"]]
-      ]),
-      exercise("pc-farmer-carries", "Farmer Carries", "4", "40 yards", "Carries", [
-        ["Purpose", ["posture under load", "grip", "core stabilization"]],
-        ["Execution", ["ribs down", "tall spine", "no side lean"]]
-      ]),
-      exercise("pc-hollow-hold-tue", "Hollow Body Hold", "3", "20-30 sec", "Core Finisher", [
-        ["Why", ["the hollow position IS posterior pelvic tilt under tension"]],
-        ["Execution", ["low back pressed into floor", "ribs down", "arms and legs only as far as you can hold the flat back"]]
-      ])
-    ]
-  },
-  Wednesday: {
-    title: "Corrective Reset + Glute Pump",
-    exercises: [
-      exercise("pc-couch-stretch-wed", "Couch Stretch", "2", "90 sec/side", "1. Release + Reposition", [
-        ["Purpose", ["long-duration hip flexor opening", "the main restriction feeding your tilt"]],
-        ["Execution", ["glute squeezed", "pelvis tucked before leaning", "breathe slowly"]]
-      ]),
-      exercise("pc-ql-stretch", "Child's Pose + Knees-to-Chest", "2", "60 sec each", "1. Release + Reposition", [
-        ["Purpose", ["unload lumbar erectors and QL"]],
-        ["Execution", ["long exhales", "let the low back round gently"]]
-      ]),
-      exercise("pc-9090-breathing-wed", "90/90 Breathing (Feet on Wall)", "2", "5 breaths", "1. Release + Reposition", [
-        ["Purpose", ["restack ribs over pelvis", "turn hamstrings and abs on"]],
-        ["Execution", ["full 5-6 sec exhale", "pause", "quiet nasal inhale"]]
-      ]),
-      exercise("pc-dead-bug-wed", "Dead Bug", "3", "8/side", "2. Activate (Weak Side)", [
-        ["Most important", ["low back stays pressed flat the entire time"]],
-        ["Execution", ["slow", "shorten range if back arches"]]
-      ]),
-      exercise("pc-hollow-hold-wed", "Hollow Body Hold", "3", "20-30 sec", "2. Activate (Weak Side)", [
-        ["Why", ["posterior pelvic tilt under tension", "directly loads your new position"]],
-        ["Execution", ["low back pressed into floor", "ribs down", "shorten the lever if the back lifts"]]
-      ]),
-      exercise("pc-banded-hip-thrust", "Banded Hip Thrust (Tilt Focus)", "3", "15", "2. Activate (Weak Side)", [
-        ["Purpose", ["high-rep glute pump in posterior tilt"]],
-        ["Execution", ["tuck pelvis first", "squeeze 2 sec at top", "ribs down"]]
-      ]),
-      exercise("pc-wall-tilt-drill", "Standing Wall Tilt Hold", "3", "60 sec", "3. Integrate", [
-        ["Why this matters most", ["this is your new default standing posture", "practice it until it is automatic"]],
-        ["Execution", ["flatten low back toward wall", "step away and hold the position", "breathe normally"]]
-      ])
+      exercise("pf-front-squat-tue", "Front Squat", "4", "6-8", "Workout", [["Focus",["Leg strength with a stacked, controlled trunk."]],["Cues",["Brace around your whole trunk; stack ribs over pelvis.","Sit between hips and let knees track naturally.","Use a controllable depth; finish tall."]],["Avoid",["Forcing your chest up into a back arch or thrusting hips forward."]],["Rest",["2-3 min"]],["Alternative",["Use a heavy goblet squat temporarily if front squats are not practical."]]]),
+      exercise("pc-rdl", "Romanian Deadlift", "4", "6-8", "Workout", [["Focus",["Hamstrings, glutes and hip-hinge control."]],["Cues",["Keep soft knees; push hips backward.","Keep the weight close; stop when hamstrings limit hip motion.","Stand by extending your hips; keep a long, controlled spine."]],["Avoid",["Reaching for the floor, squatting the hinge or leaning back at lockout."]],["Rest",["2-3 min"]]]),
+      exercise("pc-bulgarian-split-squats", "Bulgarian Split Squat", "3", "8/side", "Workout", [["Focus",["Single-leg strength, pelvic control and glute/quad balance."]],["Cues",["Find a stable stance and lower under control.","Keep your torso controlled and drive through the front foot.","Finish tall without arching."]],["Avoid",["Twisting your pelvis or pushing hard off the rear foot."]],["Rest",["90 sec"]]]),
+      exercise("pc-barbell-hip-thrust", "Hip Thrust", "3", "8-10", "Workout", [["Focus",["Glute strength without low-back compensation."]],["Cues",["Keep ribs controlled; drive through heels and mid-foot.","Squeeze glutes as the hips extend.","End the rep when hips are extended."]],["Avoid",["Chasing extra range by arching or throwing your head back."]],["Rest",["90-120 sec"]]]),
+      exercise("pc-hamstring-curls", "Hamstring Curl", "3", "10-15", "Workout", [["Focus",["Direct hamstring capacity."]],["Cues",["Keep your pelvis stable.","Move through a full comfortable range.","Squeeze smoothly and control the lowering."]],["Avoid",["Jerking the weight or moving the pelvis to finish a rep."]],["Rest",["60-90 sec"]]]),
+      exercise("pf-dead-bug-tue", "Dead Bug (Progressed)", "3", "6/side", "Workout", [["Focus",["Anti-extension control beyond the warm-up version."]],["Cues",["Use a longer lever only while trunk control stays steady.","Exhale through the reach and move slowly.","Stop the reach before your back arches."]],["Avoid",["Speed, rib flare or increasing the low-back arch."]],["Rest",["45-60 sec"]],["Progression",["Longer lever, band/cable resistance or a pullover variation; choose the version you can control."]]]),
+      exercise("pf-side-plank-tue", "Side Plank", "3", "30-45 sec/side", "Workout", [["Focus",["Lateral trunk endurance and pelvic stability."]],["Cues",["Hold a straight line from head to feet.","Stack ribs and keep hips level.","Breathe normally through the hold."]],["Avoid",["Sagging hips, rotating your chest or holding your breath."]],["Rest",["45-60 sec"]]])
     ]
   },
   Thursday: {
-    title: "Lower Body — Glute + Hamstring Priority",
+    title: "Upper Body - Rounded Shoulders + Head Position",
     exercises: [
-      exercise("pc-goblet-squats", "Goblet Squats", "3", "8", "1. Squat + Hinge", [
-        ["Purpose", ["quad strength kept in the program, demoted from priority"]],
-        ["Execution", ["brace with slight tuck", "no butt-wink chasing depth"]]
-      ]),
-      exercise("pc-rdl", "Romanian Deadlift", "4", "8", "1. Squat + Hinge", [
-        ["Why", ["builds hamstrings at length — the muscles that anchor your pelvis from behind"]],
-        ["Execution", ["hinge, do not squat it", "flat back, soft knees", "stand up with glutes, no arch at lockout"]]
-      ]),
-      exercise("pc-bulgarian-split-squats", "Bulgarian Split Squats (Glute Bias)", "3", "8/leg", "2. Bulgarian Split Squats", [
-        ["Purpose", ["single-leg glute strength", "pelvic control"]],
-        ["Execution", ["slight forward torso lean", "pelvis tucked", "push through heel"]]
-      ]),
-      exercise("pc-barbell-hip-thrust", "Barbell Hip Thrust", "4", "8-10", "3. Hip Thrusts", [
-        ["Why first", ["glutes are the #1 muscle that pulls your pelvis back to neutral", "train them freshest"]],
-        ["Most important", ["posterior tilt at top", "no lumbar arch", "ribs down"]]
-      ]),
-      exercise("pc-hamstring-curls", "Hamstring Curls", "3", "12", "4. Hamstring Curls", [
-        ["Purpose", ["direct hamstring volume", "pelvic stabilizers"]]
-      ]),
-      exercise("pc-reverse-crunch-thu", "Reverse Crunches", "3", "12-15", "5. Core", [
-        ["Purpose", ["end every lower day owning posterior tilt"]],
-        ["Execution", ["slow eccentric", "no momentum"]]
-      ]),
-      exercise("pc-knee-raises-thu", "Hanging Knee Raises with Pelvic Curl", "3", "10-12", "5. Core", [
-        ["Why", ["the pelvic curl at the top is the rep — knees up alone is hip flexors"]],
-        ["Execution", ["knees up, then curl pelvis toward ribs", "slow lower", "no swinging"]]
-      ])
+      exercise("pf-incline-press-thu", "Low-Incline Dumbbell Press", "4", "8-10", "Workout", [["Focus",["A second weekly chest stimulus for balanced upper-body strength."]],["Cues",["Use a low incline and keep ribs controlled.","Move smoothly through a comfortable full range.","Allow natural shoulder-blade movement."]],["Avoid",["A large lumbar arch, shrugging or forcing shoulders back and down."]],["Rest",["90-120 sec"]]]),
+      exercise("pf-cable-row-thu", "One-Arm Cable Row With Reach", "3", "10/side", "Workout", [["Focus",["Natural shoulder-blade movement around the rib cage."]],["Cues",["Reach first; let the shoulder blade glide forward.","Row smoothly into controlled retraction.","Keep your trunk still and neck tall."]],["Avoid",["Torso twisting, shrugging or pinning the shoulder blade back."]],["Rest",["60-90 sec"]]]),
+      exercise("pf-landmine-thu", "Half-Kneeling Landmine Press", "3", "10/side", "Workout", [["Focus",["Serratus, upward rotation and rib-pelvis control."]],["Cues",["Stack ribs; lightly engage the kneeling-side glute.","Press up and forward.","Reach naturally at the top."]],["Avoid",["Leaning back, lumbar extension or rib flare."]],["Rest",["60-90 sec"]]]),
+      exercise("pf-wall-slide-thu", "Serratus Wall Slide", "3", "10-12", "Workout", [["Focus",["Serratus endurance and shoulder-blade upward rotation."]],["Cues",["Apply light forearm pressure into the wall.","Slide upward and reach naturally.","Keep ribs stacked as shoulder blades move."]],["Avoid",["Shrugging, pinching shoulder blades or arching your low back."]],["Rest",["45-60 sec"]]]),
+      exercise("pf-prone-y-thu", "Prone Y Raise", "3", "12", "Workout", [["Focus",["Lower-trap strength and control."]],["Cues",["Use very light weight and reach long in a Y.","Keep thumbs up or neutral.","Relax your neck; keep the trunk supported."]],["Avoid",["Shrugging or using a low-back arch to raise the arms."]],["Rest",["45-60 sec"]]]),
+      exercise("pf-external-rotation-thu", "Cable or Band External Rotation", "2-3", "12-15", "Workout", [["Focus",["Rotator-cuff strength and shoulder balance."]],["Cues",["Keep your elbow close to your body.","Rotate smoothly with the shoulder centered.","Control ribs and choose a light resistance."]],["Avoid",["Twisting your torso or letting the elbow drift."]],["Rest",["45-60 sec"]]]),
+      exercise("pf-neck-nod-thu", "Deep-Neck-Flexor Nod", "3", "8 reps, 5-sec holds", "Workout", [["Focus",["Head and neck endurance."]],["Cues",["Rest your head on a support and make a tiny 'yes' nod.","Keep the back of your neck long.","Relax your jaw and upper traps."]],["Avoid",["Lifting your head, aggressively tucking your chin or straining."]],["Rest",["30-45 sec"]]]),
+      exercise("pf-front-rack-thu", "Front-Rack Carry", "3", "20-30 m", "Workout", [["Focus",["Whole-body stacking and loaded trunk stability."]],["Cues",["Hold two kettlebells or dumbbells in front rack.","Keep head over ribs and ribs over pelvis.","Walk slowly and quietly; breathe and keep neck tall."]],["Avoid",["Leaning backward, arching or shrugging excessively."]],["Rest",["60-90 sec"]]])
     ]
   },
   Friday: {
-    title: "Athletic Full Body (Posture-Safe)",
+    title: "Lower Body - Athletic Trunk + Pelvic Stability",
     exercises: [
-      superset("pc-athletic-circuit", "Posture-Safe Athletic Circuit", [
-        exercise("pc-circuit-inverted-rows", "Inverted Rows", "5", "10-12", "Circuit", [
-          ["Why not pullups", ["horizontal pull with the body held as a rigid plank", "no lat-driven arching when fatigued"]],
-          ["Execution", ["glutes squeezed", "straight line head to heels", "ribs down"]]
-        ]),
-        exercise("pc-circuit-pushups", "Pushups (Ribs Down)", "5", "15-20", "Circuit"),
-        exercise("pc-circuit-sled-push", "Sled Push/Pull", "5", "20 yards", "Circuit"),
-        exercise("pc-circuit-reverse-lunges", "Reverse Lunges", "5", "10/leg", "Circuit", [
-          ["Why reverse", ["easier to keep pelvis tucked than walking lunges"]]
-        ]),
-        exercise("pc-circuit-knee-raises", "Hanging Knee Raises with Pelvic Curl", "5", "12", "Circuit"),
-        exercise("pc-circuit-banded-hip-thrust", "Banded Hip Thrusts", "5", "15", "Circuit", [
-          ["Purpose", ["direct glute pump inside the circuit"]],
-          ["Execution", ["tuck pelvis first", "squeeze at top", "ribs down"]]
-        ]),
-        exercise("pc-circuit-suitcase-carry", "Suitcase Carry (Between Rounds)", "5", "40 yards/side", "Circuit", [
-          ["How", ["use this as your walking rest between circuit rounds"]]
-        ])
-      ])
+      exercise("pf-trap-bar-fri", "Trap-Bar Deadlift", "4", "4-6", "Workout", [["Focus",["Total-body strength with a controlled spine."]],["Cues",["Brace around your whole trunk.","Push the floor away and keep ribs stacked.","Finish tall with hips extended."]],["Avoid",["Yanking from the floor or leaning back at the top."]],["Rest",["2-3 min"]]]),
+      exercise("pc-circuit-reverse-lunges", "Reverse Lunge", "3", "8/leg", "Workout", [["Focus",["Single-leg strength and pelvic control."]],["Cues",["Step back under control; keep the front foot grounded.","Keep your torso stacked.","Drive up through the front leg."]],["Avoid",["Twisting your pelvis, pushing off the rear foot or arching."]],["Rest",["75-90 sec"]]]),
+      exercise("pf-step-up-fri", "Step-Up", "3", "8/leg", "Workout", [["Focus",["Single-leg strength and hip stability."]],["Cues",["Place the whole working foot on the box.","Drive through that leg and finish tall.","Control the descent."]],["Avoid",["Jumping off the rear leg, hiking a hip or rotating your pelvis."]],["Rest",["75-90 sec"]]]),
+      exercise("pf-single-rdl-fri", "Single-Leg RDL", "3", "8/leg", "Workout", [["Focus",["Hamstrings, glutes, balance and pelvic control."]],["Cues",["Hinge at the hip with a long spine.","Keep your pelvis square.","Reach back with the free leg; use a controlled range."]],["Avoid",["Opening your pelvis, rounding or reaching too low."]],["Rest",["60-90 sec"]]]),
+      exercise("pf-pallof-fri", "Pallof Press", "3", "10/side", "Workout", [["Focus",["Anti-rotation trunk stability."]],["Cues",["Set the cable or band to one side; keep torso and pelvis aligned.","Press hands forward and resist being rotated.","Keep ribs controlled and breathe."]],["Avoid",["Twisting, leaning or flaring your ribs."]],["Rest",["45-60 sec"]]]),
+      exercise("pf-copenhagen-fri", "Copenhagen Plank", "2-3", "20-30 sec/side", "Workout", [["Focus",["Adductor strength and lateral trunk/pelvic stability."]],["Cues",["Support your upper leg on a bench; use a bent-knee lever as needed.","Lift your hips into a straight trunk line.","Keep ribs controlled and breathe."]],["Avoid",["Sagging, rotating or excessive neck tension."]],["Rest",["45-60 sec"]]]),
+      exercise("pf-sled-fri", "Sled Push", "5-6", "20 m", "Workout", [["Focus",["Leg drive, trunk control and athletic conditioning."]],["Cues",["Hold a strong forward body angle and brace your trunk.","Drive the ground away with smooth steps.","Choose a load that preserves your position."]],["Avoid",["Letting your low back sag or losing rib-pelvis control."]],["Rest",["60-90 sec, or until quality returns"]]])
     ]
   },
   Saturday: {
-    title: "Zone 2 + Decompression",
+    title: "Integrated Posture + Athletic Movement",
     exercises: [
-      exercise("pc-zone-2", "Zone 2 Incline Walk", "1", "30-45 min", "Conditioning", [
-        ["Best mode", ["incline treadmill walk — every stride is free hip-extension work"]],
-        ["Also fine", ["rower"]],
-        ["Minimize", ["long bike sessions — 45 min of hip flexion feeds the tight hip flexors"]],
-        ["Goal", ["aerobic base", "recovery", "leanness support"]]
-      ]),
-      exercise("pc-couch-stretch-sat", "Couch Stretch", "1", "90 sec/side", "Recovery Flow", [
-        ["Execution", ["glute squeezed", "pelvis tucked", "ribs down"]]
-      ]),
-      exercise("pc-childs-pose-sat", "Child's Pose Breathing", "1", "5 breaths", "Recovery Flow", [
-        ["Execution", ["long exhale", "breathe into back ribs"]]
-      ]),
-      exercise("pc-hanging-decompression", "Hanging Decompression", "3", "30-45 sec", "Decompression", [
-        ["Purpose", ["spinal unloading"]],
-        ["Execution", ["relax into the hang", "no aggressive arching"]]
-      ]),
-      exercise("pc-wall-tilt-sat", "Standing Wall Tilt Hold", "3", "60 sec", "Posture Practice", [
-        ["Purpose", ["rehearse your new default standing position"]],
-        ["Execution", ["flatten low back toward wall", "step away", "hold and breathe"]]
-      ])
+      exercise("pf-farmer-sat", "Farmer Carry", "4", "30-40 m", "Workout", [["Focus",["Whole-body trunk control and natural gait under load."]],["Cues",["Walk tall with ribs stacked and head level.","Use a normal stride.","Breathe while maintaining your brace."]],["Avoid",["Shrugging, leaning or taking short choppy steps."]],["Rest",["60-90 sec"]]]),
+      exercise("pf-bear-sat", "Bear Crawl", "4", "15-20 m", "Workout", [["Focus",["Serratus, anti-extension abs and opposite-limb coordination."]],["Cues",["Hover knees just above the floor.","Take small opposite-hand/opposite-foot steps.","Push the floor away and keep hips steady."]],["Avoid",["Swaying hips, a sagging low back or rushing with huge steps."]],["Rest",["45-60 sec"]]]),
+      exercise("pf-walking-lunge-sat", "Walking Lunges", "3", "10/leg", "Workout", [["Focus",["Dynamic single-leg control and pelvic stability."]],["Cues",["Take a long enough step to stay controlled.","Keep torso stacked; push through the front foot.","Transition smoothly between steps."]],["Avoid",["Twisting, overarching or losing knee/hip control."]],["Rest",["60-90 sec"]]]),
+      exercise("pf-pushup-plus-sat", "Push-Up Plus", "3", "12-15", "Workout", [["Focus",["Serratus strength and scapular protraction/control."]],["Cues",["Perform a controlled push-up.","At the top, push the floor slightly farther away.","Let shoulder blades wrap around ribs; hold your trunk position."]],["Avoid",["Collapsing, shrugging or rounding your entire spine."]]]),
+      exercise("pf-pullup-sat", "Pull-Up", "3", "6-10", "Workout", [["Focus",["Maintain vertical pulling strength with controlled ribs."]],["Cues",["Start from a controlled hang.","Pull smoothly with a neutral neck.","Keep ribs controlled throughout."]],["Avoid",["Kipping, a large chest/back arch or shrugging into ears."]],["Rest",["90 sec"]]]),
+      { ...exercise("pf-sled-combo-sat", "Sled Push + Backward Drag", "4", "20 m push + 20 m backward drag", "Workout", [["Focus",["Leg strength, athletic conditioning and trunk control."]],["Cues",["Each round: push 20 m, then drag backward 20 m.","Keep your torso controlled and take steady steps.","Maintain posture throughout both movements."]],["Avoid",["Rushing or letting your low back sag."]],["Rest",["60-90 sec between rounds"]]]), setLabel: "Round" },
+      exercise("pc-zone-2", "Zone 2 Cardio", "1", "20-30 min", "Workout", [["Focus",["Aerobic base, recovery and conditioning."]],["Cues",["Use a bike, incline walk, easy jog, elliptical or another easy steady option.","Keep the effort comfortable enough to speak in sentences."]],["Avoid",["Turning the session into a threshold workout."]]])
     ]
   }
 };
@@ -321,8 +354,7 @@ const STORAGE_KEYS = {
 const state = {
   view: "workouts",
   day: "",
-  section: "",
-  workoutGroup: "",
+  expanded: {},
   workouts: readStore(STORAGE_KEYS.workouts, {}),
   weights: readStore(STORAGE_KEYS.weights, [])
 };
@@ -393,14 +425,7 @@ function renderWorkoutScreen() {
     renderDayList();
     return;
   }
-
-  if (!state.section) {
-    renderDayChoices();
-    return;
-  }
-
-  if (state.section === "mobility") renderMobility();
-  if (state.section === "workout") renderWorkout();
+  renderDayChoices();
 }
 
 function renderDayList() {
@@ -413,8 +438,6 @@ function renderDayList() {
   els.workoutScreen.querySelectorAll("[data-day]").forEach((button) => {
     button.addEventListener("click", () => {
       state.day = button.dataset.day;
-      state.section = "";
-      state.workoutGroup = "";
       renderWorkoutScreen();
     });
   });
@@ -422,50 +445,87 @@ function renderDayList() {
 
 function renderDayChoices() {
   const program = PROGRAM[state.day];
+  const log = getWorkoutLog();
+  const expanded = state.expanded[state.day] || {};
+  const progress = getSectionProgress(program.exercises, log);
+  const mobilityDone = MOBILITY_ROUTINE.filter((item) => log.mobility[item.id]).length;
+
   els.workoutScreen.innerHTML = `
     ${subnav(state.day)}
-    <div class="choice-list">
-      <button class="choice-card" type="button" data-section="mobility">
-        <span>Mobility</span>
-        <strong>${MOBILITY_ROUTINE.length} moves</strong>
-      </button>
-      <button class="choice-card" type="button" data-section="workout">
-        <span>${program.title}</span>
-        <strong>Workout</strong>
-      </button>
+    <div class="daily-sections">
+      <details class="day-section" data-section="mobility" ${expanded.mobility ? "open" : ""}>
+        <summary>
+          <span class="section-number">01</span>
+          <span class="section-copy">
+            <strong>Daily Mobility</strong>
+            <small>6 moves · 8-10 min</small>
+            <span class="section-progress" data-mobility-progress>${mobilityDone} of 6 complete</span>
+          </span>
+          <span class="section-chevron" aria-hidden="true">›</span>
+        </summary>
+        <div class="mobility-list section-body">
+          ${MOBILITY_ROUTINE.map((item, index) => renderMobilityCard(item, index, log)).join("")}
+        </div>
+      </details>
+      <details class="day-section" data-section="workout" ${expanded.workout ? "open" : ""}>
+        <summary>
+          <span class="section-number">02</span>
+          <span class="section-copy">
+            <strong>Workout</strong>
+            <span class="day-workout-title">${program.title}</span>
+            <ul>
+              ${program.exercises.map((item) => `<li>${item.title} <em>${item.sets} x ${item.reps}</em></li>`).join("")}
+            </ul>
+            <span class="section-progress" data-workout-progress>${progress.completed} of ${progress.total} required sets complete</span>
+          </span>
+          <span class="section-chevron" aria-hidden="true">›</span>
+        </summary>
+        <div class="section-body">
+          <p class="posture-cue">Head over ribs. Ribs over pelvis. Weight through mid-foot.</p>
+          <div class="workout-section-detail">
+            ${program.exercises.map((item, index) => renderWorkoutDetail(item, index + 1, log)).join("")}
+          </div>
+          <div class="program-guidance mobility-notes">
+            <section>
+              <strong>Progress with control</strong>
+              <ul>
+                <li>Main lifts: reach the top of the rep range on every set with clean form and 1-2 reps in reserve before adding weight.</li>
+                <li>Add about 5 lb total for upper body or 5-10 lb for lower body.</li>
+                <li>Control drills: improve tempo, breathing, range or hold quality before adding load.</li>
+              </ul>
+            </section>
+            <section>
+              <strong>12-week focus</strong>
+              <ul>
+                <li>Weeks 1-4: technique and control, main lifts around RPE 6-7.</li>
+                <li>Weeks 5-8: add weight gradually while keeping the same movement quality.</li>
+                <li>Weeks 9-12: integrate strength, main lifts around RPE 7-8.</li>
+              </ul>
+            </section>
+            <p class="training-note">Keep a comfortable, natural lumbar curve and relaxed shoulders. Stop for sharp pain; reduce load or range when control breaks down.</p>
+          </div>
+        </div>
+      </details>
     </div>
   `;
 
   bindBack();
-  els.workoutScreen.querySelectorAll("[data-section]").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.section = button.dataset.section;
-      state.workoutGroup = "";
-      renderWorkoutScreen();
+  els.workoutScreen.querySelectorAll("details[data-section]").forEach((section) => {
+    section.addEventListener("toggle", () => {
+      if (!state.expanded[state.day]) state.expanded[state.day] = {};
+      state.expanded[state.day][section.dataset.section] = section.open;
     });
   });
-}
-
-function renderMobility() {
-  const log = getWorkoutLog();
-
-  els.workoutScreen.innerHTML = `
-    ${subnav("Mobility")}
-    <div class="mobility-intro">
-      <strong>Full Pre-Workout Posture Reset</strong>
-      <span>10-15 mins. Do these in this exact order before every workout.</span>
-    </div>
-    <div class="mobility-list">
-      ${MOBILITY_ROUTINE.map((item, index) => renderMobilityCard(item, index, log)).join("")}
-    </div>
-  `;
-
-  bindBack();
   els.workoutScreen.querySelectorAll("[data-mobility]").forEach((input) => {
     input.addEventListener("change", () => {
       log.mobility[input.dataset.mobility] = input.checked;
       persistWorkoutLog(log);
+      const completed = MOBILITY_ROUTINE.filter((item) => log.mobility[item.id]).length;
+      els.workoutScreen.querySelector("[data-mobility-progress]").textContent = `${completed} of 6 complete`;
     });
+  });
+  els.workoutScreen.querySelectorAll("[data-set-check]").forEach((input) => {
+    input.addEventListener("change", () => updateSetCheck(input));
   });
 }
 
@@ -476,7 +536,7 @@ function renderMobilityCard(item, index, log) {
         <p>${index + 1}. ${item.title}</p>
         <span>(${item.subtitle})</span>
       </div>
-      <img class="mobility-image" src="${item.image}" alt="${item.title} reference">
+      <img class="mobility-image" src="${item.image}" alt="${item.title} reference" loading="lazy" decoding="async" width="1672" height="941">
       <div class="mobility-content">
         <label class="mobility-check">
           <input class="check" type="checkbox" data-mobility="${item.id}" ${log.mobility[item.id] ? "checked" : ""}>
@@ -498,97 +558,19 @@ function renderMobilityCard(item, index, log) {
   `;
 }
 
-function renderWorkout() {
-  const program = PROGRAM[state.day];
-  const sections = groupWorkoutItems(program.exercises);
-  const selectedIndex = Number(state.workoutGroup);
-  const selectedSection = state.workoutGroup === "" ? null : sections[selectedIndex];
-  const log = getWorkoutLog();
-
-  if (!selectedSection) {
-    els.workoutScreen.innerHTML = `
-      ${subnav(program.title)}
-      <div class="workout-section-list">
-        ${sections.map((section, index) => renderWorkoutSectionChoice(section, index, log)).join("")}
-      </div>
-    `;
-
-    bindBack();
-    els.workoutScreen.querySelectorAll("[data-workout-group]").forEach((button) => {
-      button.addEventListener("click", () => {
-        state.workoutGroup = button.dataset.workoutGroup;
-        renderWorkout();
-      });
-    });
-    return;
-  }
-
-  els.workoutScreen.innerHTML = `
-    ${subnav(selectedSection.title)}
-    <div class="workout-section-detail">
-      ${flattenWorkoutSection(selectedSection).map((item, index) => renderWorkoutDetail(item, index + 1, log)).join("")}
-    </div>
-  `;
-
-  bindBack();
-  els.workoutScreen.querySelectorAll("[data-set-check]").forEach((input) => {
-    input.addEventListener("change", () => updateSetCheck(input));
-  });
-}
-
-function renderWorkoutSectionChoice(section, index, log) {
-  const exercises = flattenWorkoutSection(section);
-  const progress = getSectionProgress(exercises, log);
-  return `
-    <button class="workout-section-choice" type="button" data-workout-group="${index}">
-      <span class="section-number">${String(index + 1).padStart(2, "0")}</span>
-      <span class="section-copy">
-        <strong>${section.title}</strong>
-        <small>${exercises.length} ${exercises.length === 1 ? "exercise" : "exercises"}</small>
-        <ul>
-          ${exercises.map((item) => `<li>${item.title} <em>${item.sets} x ${item.reps}</em></li>`).join("")}
-        </ul>
-        <span class="section-progress">${progress.completed} of ${progress.total} sets complete</span>
-      </span>
-      <span class="section-chevron" aria-hidden="true">›</span>
-    </button>
-  `;
-}
-
-function groupWorkoutItems(items) {
-  const sections = [];
-
-  items.forEach((item) => {
-    const title = item.type === "superset" ? groupLabel(item) : item.note;
-    let section = sections.find((entry) => entry.title === title);
-    if (!section) {
-      section = { title, items: [] };
-      sections.push(section);
-    }
-    section.items.push(item);
-  });
-
-  return sections;
-}
-
-function flattenWorkoutSection(section) {
-  return section.items.flatMap((item) => item.type === "superset" ? item.exercises : [item]);
-}
-
-function groupLabel(group) {
-  return group.label.toLowerCase().includes("circuit") ? "Circuit" : "Superset";
-}
 
 function renderWorkoutDetail(item, exerciseNumber, log) {
+  const sources = EXERCISE_IMAGES[item.id];
+  const images = Array.isArray(sources) ? sources : sources ? [sources] : [];
   return `
     <article class="mobility-card workout-card">
       <div class="mobility-header workout-header">
         <p>${exerciseNumber}. ${item.title}</p>
-        <span>(${item.note})</span>
+        <span>${item.setLabel === "Round" ? "Rounds" : "Prescribed sets"}</span>
       </div>
-      ${EXERCISE_IMAGES[item.id] ? `<img class="mobility-image" src="${EXERCISE_IMAGES[item.id]}" alt="${item.title} form reference">` : ""}
+      ${images.map((src, index) => `<img class="mobility-image" src="${src}" alt="${images.length > 1 ? (index === 0 ? "Sled push" : "Backward sled drag") : item.title} form reference" loading="lazy" decoding="async" width="1672" height="941">`).join("")}
       <div class="workout-content">
-        <span class="pill">${item.sets} x ${item.reps}</span>
+        <span class="pill">${item.sets} ${item.setLabel === "Round" ? "rounds x" : "x"} ${item.reps}</span>
         ${renderSetChecks(item, log)}
         ${item.sections.length ? `
           <div class="mobility-notes">
@@ -609,16 +591,18 @@ function renderWorkoutDetail(item, exerciseNumber, log) {
 
 function renderSetChecks(item, log) {
   const setCount = getPrescribedSetCount(item);
+  const requiredCount = getRequiredSetCount(item);
+  const setLabel = item.setLabel || "Set";
   const savedSets = Array.isArray(log.exercises[item.id]) ? log.exercises[item.id] : [];
 
   return `
     <fieldset class="set-checks">
-      <legend>Complete each set</legend>
+      <legend>${setLabel === "Round" ? "Complete each round" : "Complete each set"}</legend>
       <div class="set-check-list">
         ${Array.from({ length: setCount }, (_, setIndex) => `
           <label class="set-check">
-            <input class="check" type="checkbox" data-set-check data-exercise="${item.id}" data-set="${setIndex}" ${savedSets[setIndex]?.done ? "checked" : ""}>
-            <span>Set ${setIndex + 1}</span>
+            <input class="check" type="checkbox" aria-label="${item.title}, ${setLabel.toLowerCase()} ${setIndex + 1}${setIndex >= requiredCount ? ', optional' : ''}" data-set-check data-exercise="${item.id}" data-set="${setIndex}" ${savedSets[setIndex]?.done ? "checked" : ""}>
+            <span>${setLabel} ${setIndex + 1}${setIndex >= requiredCount ? " (optional)" : ""}</span>
           </label>
         `).join("")}
       </div>
@@ -627,12 +611,16 @@ function renderSetChecks(item, log) {
 }
 
 function getPrescribedSetCount(item) {
+  return Math.max(1, ...(String(item.sets).match(/\d+/g) || ["1"]).map(Number));
+}
+
+function getRequiredSetCount(item) {
   return Math.max(1, Number.parseInt(item.sets, 10) || 1);
 }
 
 function getSectionProgress(exercises, log) {
   return exercises.reduce((progress, item) => {
-    const setCount = getPrescribedSetCount(item);
+    const setCount = getRequiredSetCount(item);
     const savedSets = Array.isArray(log.exercises[item.id]) ? log.exercises[item.id] : [];
     progress.total += setCount;
     progress.completed += savedSets.slice(0, setCount).filter((set) => set?.done).length;
@@ -649,6 +637,8 @@ function updateSetCheck(input) {
   if (!log.exercises[exerciseId][setIndex]) log.exercises[exerciseId][setIndex] = {};
   log.exercises[exerciseId][setIndex].done = input.checked;
   persistWorkoutLog(log);
+  const progress = getSectionProgress(PROGRAM[state.day].exercises, log);
+  els.workoutScreen.querySelector("[data-workout-progress]").textContent = `${progress.completed} of ${progress.total} required sets complete`;
 }
 
 function subnav(title) {
@@ -666,17 +656,7 @@ function bindBack() {
   if (!back) return;
 
   back.addEventListener("click", () => {
-    if (state.workoutGroup !== "") {
-      state.workoutGroup = "";
-      renderWorkout();
-      return;
-    }
-
-    if (state.section) {
-      state.section = "";
-    } else {
-      state.day = "";
-    }
+    state.day = "";
     renderWorkoutScreen();
   });
 }
@@ -726,10 +706,6 @@ function persistWorkoutLog(log) {
 
 function exercise(id, title, sets, reps, note, sections = []) {
   return { type: "exercise", id, title, sets, reps, note, sections };
-}
-
-function superset(id, label, exercises) {
-  return { type: "superset", id, label, exercises };
 }
 
 function drawChart(entries) {

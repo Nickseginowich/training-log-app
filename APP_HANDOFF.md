@@ -9,7 +9,7 @@ This file gives a new AI enough context to edit, test, and deploy the Training L
 - Production app: `https://nickseginowich.github.io/training-log-app/`
 - Deployment branch: `main`
 - Hosting: GitHub Pages, automatically redeployed after a push to `main`
-- Use `git log -1 --oneline` to identify the current deployed baseline before editing.
+- Use `git log -1 --oneline` to identify the local baseline; verify origin/main and live files independently before claiming it is deployed.
 - Stack: static HTML, CSS, and vanilla JavaScript PWA
 - Backend: none
 - Build step: none
@@ -22,79 +22,82 @@ This is a simple, polished, mobile-first personal training app. The desired visu
 
 The main workflow is deliberately shallow:
 
-1. Open the app and choose `Workouts` or `Body Weight` from the top tabs.
-2. The Workouts landing screen shows only the available days: Monday through Saturday.
-3. Choose a day to see two choices: Mobility and that day's named workout.
-4. Mobility immediately shows the full seven-move routine in order, with images, instructions, dose, and one Done checkbox per move.
-5. Workout shows clear section cards. Each card lists its exercises and prescribed sets/reps.
-6. Choose a section to see only that section's exercises, including images, instructions, and one simple checkbox for each prescribed set.
-7. The selected day remains visible near the top inside workout and exercise-section views.
+1. Open the app and choose Workouts or Body Weight from the top tabs.
+2. Workouts shows Monday, Tuesday, Thursday, Friday and Saturday only. Wednesday and Sunday are recovery days.
+3. Choose a day to see two native expandable sections: Daily Mobility first, Workout second.
+4. Daily Mobility contains the shared six-move routine, with images, doses, concise setup/focus/cues/avoid text, and one Done checkbox per move.
+5. Workout summarizes every exercise in programmed order before opening; expanding it shows all of that day's exercise cards and form images.
+6. Workout tracking means one checkbox per prescribed set, with no weight or rep entry fields. Ranges such as 2-3 sets show the third set as optional. Required-set progress excludes optional sets.
+7. The Saturday sled combination is four rounds, each with a 20 m push and 20 m backward drag, with one checkbox per round.
+8. Section open/closed state survives switching tabs or returning to that day within the current session. Completion marks persist locally across reloads.
+9. The selected day remains at the top of the day screen.
 
-Do not restore weight/repetition entry fields for workouts unless the user explicitly asks. Workout tracking currently means checking off prescribed sets only. Prescribed set and rep text such as `4 x 8` remains visible.
+## Current program (2026-10-03)
 
-## Current weekly program structure
+The user supplied a new posture-first plan and authorized replacing the old plan. `PROGRAM` in `app.js` is canonical. Do not reintroduce older Wednesday workouts, forced flat-back coaching, or the former Friday circuit.
 
-The canonical exercise data is in `PROGRAM` in `app.js`. Never treat this summary as a replacement for reading the code before editing.
+### Monday: Upper Body - Chest + Scapular Control
 
-### Monday: Upper Strength + Anti-Extension
+1. Incline Dumbbell Press: 4 x 6-8
+2. Chest-Supported Row: 3 x 8-10
+3. Half-Kneeling Landmine Press: 3 x 8/side
+4. Push-Up Plus: 3 x 10-15
+5. Prone Y Raise: 3 x 10-15
+6. Suitcase Carry: 3 x 30-40 m/side
 
-- A. Strength: Weighted Pull-ups, Landmine Press
-- B. Posture / Control: Chest-supported Rows, Ring Pushups, Face Pulls
-- C. Core (Tilt Drivers): Reverse Crunches, RKC Plank, Cable or Kneeling Crunch, Suitcase Carry
+### Tuesday: Lower Body - Pelvis + Posterior Chain
 
-### Tuesday: Power + Carries (Posture-Safe)
+1. Front Squat: 4 x 6-8
+2. Romanian Deadlift: 4 x 6-8
+3. Bulgarian Split Squat: 3 x 8/side
+4. Hip Thrust: 3 x 8-10
+5. Hamstring Curl: 3 x 10-15
+6. Dead Bug (Progressed): 3 x 6/side
+7. Side Plank: 3 x 30-45 sec/side
 
-- Power: Heavy Sled Push, Backward Sled Drag, Kettlebell Swings
-- Carries: Farmer Carries
-- Core Finisher: Hollow Body Hold only
+### Thursday: Upper Body - Rounded Shoulders + Head Position
 
-### Wednesday: Corrective Reset + Glute Pump
+1. Low-Incline Dumbbell Press: 4 x 8-10
+2. One-Arm Cable Row With Reach: 3 x 10/side
+3. Half-Kneeling Landmine Press: 3 x 10/side
+4. Serratus Wall Slide: 3 x 10-12
+5. Prone Y Raise: 3 x 12
+6. Cable or Band External Rotation: 2-3 x 12-15
+7. Deep-Neck-Flexor Nod: 3 x 8 reps, 5-sec holds
+8. Front-Rack Carry: 3 x 20-30 m
 
-- 1. Release + Reposition: Couch Stretch, Child's Pose + Knees-to-Chest, 90/90 Breathing
-- 2. Activate (Weak Side): Dead Bug, Hollow Body Hold, Banded Hip Thrust
-- 3. Integrate: Standing Wall Tilt Hold
+### Friday: Lower Body - Athletic Trunk + Pelvic Stability
 
-### Thursday: Lower Body - Glute + Hamstring Priority
+1. Trap-Bar Deadlift: 4 x 4-6
+2. Reverse Lunge: 3 x 8/leg
+3. Step-Up: 3 x 8/leg
+4. Single-Leg RDL: 3 x 8/leg
+5. Pallof Press: 3 x 10/side
+6. Copenhagen Plank: 2-3 x 20-30 sec/side
+7. Sled Push: 5-6 x 20 m
 
-- 1. Squat + Hinge: Goblet Squats, Romanian Deadlift
-- 2. Bulgarian Split Squats: Bulgarian Split Squats
-- 3. Hip Thrusts: Barbell Hip Thrust
-- 4. Hamstring Curls: Hamstring Curls
-- 5. Core: Reverse Crunches, Hanging Knee Raises with Pelvic Curl
+### Saturday: Integrated Posture + Athletic Movement
 
-### Friday: Athletic Full Body (Posture-Safe)
+1. Farmer Carry: 4 x 30-40 m
+2. Bear Crawl: 4 x 15-20 m
+3. Walking Lunges: 3 x 10/leg
+4. Push-Up Plus: 3 x 12-15
+5. Pull-Up: 3 x 6-10
+6. Sled Push + Backward Drag: 4 rounds x 20 m push + 20 m backward drag
+7. Zone 2 Cardio: 1 x 20-30 min
 
-One circuit in this exact order:
+## Daily Mobility (8-10 minutes)
 
-1. Inverted Rows
-2. Pushups (Ribs Down)
-3. Sled Push/Pull
-4. Reverse Lunges
-5. Hanging Knee Raises with Pelvic Curl
-6. Banded Hip Thrusts
-7. Suitcase Carry (Between Rounds)
+1. 90/90 Wall Breathing: 2 sets x 5 slow breaths
+2. Dead Bug: 1 set x 6 reps/side
+3. Half-Kneeling Hip-Flexor Mobilization: 8 controlled reps/side
+4. Thoracic Extension Over Foam Roller: 6 controlled reps
+5. Serratus Wall Slide: 1 set x 10 reps
+6. Deep-Neck-Flexor Nod: 8 reps x about 5-sec hold
 
-### Saturday: Zone 2 + Decompression
+The global cue is head over ribs, ribs over pelvis, weight through mid-foot. Keep a comfortable natural lumbar curve, relaxed shoulders, and natural shoulder-blade movement. Do not coach permanent pelvic tucking, forced lumbar flattening, or shoulders permanently pinned back/down.
 
-- Conditioning: Zone 2 Incline Walk
-- Recovery Flow: Couch Stretch, Child's Pose Breathing
-- Decompression: Hanging Decompression
-- Posture Practice: Standing Wall Tilt Hold
-- There is no Reset section.
-
-## Mobility routine
-
-`MOBILITY_ROUTINE` in `app.js` is the canonical seven-move pre-workout routine. It currently contains:
-
-1. 90/90 Hip Lift Breathing
-2. Half-Kneeling Hip Flexor Stretch
-3. Dead Bug
-4. Glute Bridge with Posterior Pelvic Tilt
-5. Serratus Wall Slides
-6. Adductor Rockback
-7. Open Book Thoracic Rotations
-
-Mobility is informational and completion-based. Do not add weight, rep, or set-entry forms to it.
+The workout footer contains the supplied progression guidance and 12-week phase outline. There is no separate daily cooldown feature.
 
 ## Architecture and important files
 
@@ -103,8 +106,8 @@ Mobility is informational and completion-based. Do not add weight, rep, or set-e
 - `app.js`: mobility data, exercise-image lookup, weekly program, state, rendering, checklists, body-weight chart, local persistence, and service-worker registration/status.
 - `service-worker.js`: versioned offline app-shell cache and stale-while-revalidate asset handling.
 - `manifest.webmanifest`: installable PWA metadata.
-- `assets/mobility/`: seven 16:9 instructional mobility images.
-- `assets/workouts/`: workout exercise reference images.
+- `assets/mobility/`: original 16:9 instructional images, reused where appropriate.
+- `assets/workouts/`: workout reference images, including 18 new images for the October plan. `generation-prompts.json` records generation prompts; it is documentation, not an app dependency.
 - `assets/icons/`: PWA and Apple touch icons.
 - `README.md`: short deployment and local-preview notes.
 - `.nojekyll`: prevents GitHub Pages/Jekyll processing.
@@ -120,16 +123,16 @@ exercise(id, title, sets, reps, sectionName, instructionSections)
 ```
 
 - `id` must be stable and unique. Existing completion data is keyed by it.
-- `sets` is stored as a string but must parse to the number of checkboxes required.
+- `sets` is a string: fixed values use that many checkboxes; ranges like `2-3` use the maximum, marking sets above the minimum optional.
 - `reps` is display text and can contain values such as `8/leg`, `20-30 sec`, or `40 yards/side`.
-- `sectionName` groups adjacent exercises into workout section cards.
+- `sectionName` retains the existing `note` field; current exercises use `"Workout"`.
 - `instructionSections` is an array of `[heading, bulletPoints]` pairs.
 
-Friday uses the existing `superset(id, label, exercises)` helper. Preserve its structure when changing that circuit.
+The current plan uses ordinary exercise records, not the old superset/circuit shape. The sled combination has optional `setLabel: "Round"` to label its checklist correctly.
 
 ### Images
 
-Every workout exercise must map its stable ID in `EXERCISE_IMAGES` to a local image under `assets/workouts/` or an intentionally reused mobility image. The detail renderer only shows an image when this map contains the exercise ID.
+Every workout exercise maps its stable ID in `EXERCISE_IMAGES` to a local image under `assets/workouts/` or a reused mobility image. Values are strings, except the Saturday sled combination uses an array of two paths to show both movements. Images use lazy loading and fixed dimensions.
 
 New exercise images should match the existing native style:
 
@@ -149,7 +152,7 @@ When adding an image:
 
 ### Section grouping
 
-`groupWorkoutItems()` groups normal exercises by the section/note string and treats supersets as their own group. To move an exercise between sections, update its section string and its position in `PROGRAM`. Keep section numbering and displayed order coherent.
+`renderDayChoices()` renders the two native `<details>` sections. `renderMobilityCard()` and `renderWorkoutDetail()` preserve the shared exercise-card style. Exercise order comes directly from each day's `PROGRAM.exercises` array; there are no intermediate workout-group pages.
 
 ### Local persistence
 
@@ -231,6 +234,10 @@ Test the affected workflow in a browser at `http://127.0.0.1:8000/`. For program
 - no console errors
 
 Also verify an unaffected mobility card and the Body Weight tab when changes could touch shared rendering or styles.
+
+## Latest verification
+
+The October update was checked against the supplied exercise order and prescriptions, including all 35 workout records, 6 mobility doses, image existence and cache inclusion, and required/optional set counts. Browser checks cover all days, collapse/reopen, tab switching, checkbox persistence, preservation of historical local data, body-weight saving, offline reload/image loading, and 320/390/1440 px layouts. Re-test relevant flows after future changes; this note is not a substitute for fresh validation.
 
 ## Commit and deployment
 
