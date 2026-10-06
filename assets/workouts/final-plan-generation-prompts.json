@@ -1,0 +1,17 @@
+[
+  {
+    "filename": "cable-fly.png",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: scientific-educational. Training app form-reference image. Standing cable chest fly. One male between two cable towers, split stance, neutral spine, slight forward lean of whole body, elbows softly bent, hands drawing together in front of chest, cable handles correctly connected to pulleys on either side slightly behind him. Three-quarter front view, full body and equipment. Match the app's realistic minimalist fitness illustration style: athletic male with short dark hair, charcoal t-shirt, muted slate-blue shorts and dark trainers. Warm off-white seamless studio background, soft neutral lighting, subtle floor shadow. Landscape 16:9 PNG, target 1672x941. Subject fully framed with generous margin. No text, arrows, logos, borders, or extra figures."
+  },
+  {
+    "filename": "sprint-warmup.png",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: scientific-educational. Training app form-reference image. Sprint preparation high-knee march. One male in side view, standing tall on one foot, opposite knee raised to hip height and opposite arm bent forward, relaxed shoulders. Controlled warmup movement not full sprint. Full body including shoes. Match the app's realistic minimalist fitness illustration style: athletic male with short dark hair, charcoal t-shirt, muted slate-blue shorts and dark trainers. Warm off-white seamless studio background, soft neutral lighting, subtle floor shadow. Landscape 16:9 PNG, target 1672x941. Subject fully framed with generous margin. No text, arrows, logos, borders, or extra figures."
+  },
+  {
+    "filename": "sprints.png",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: scientific-educational. Training app form-reference image. Sprinting with smooth mechanics. One male in side view at mid stride, opposite arm and leg coordinated, slight whole-body forward lean, neutral neck and spine, no exaggerated back arch. Both legs clearly visible and anatomically plausible. Full body including shoes. Match the app's realistic minimalist fitness illustration style: athletic male with short dark hair, charcoal t-shirt, muted slate-blue shorts and dark trainers. Warm off-white seamless studio background, soft neutral lighting, subtle floor shadow. Landscape 16:9 PNG, target 1672x941. Subject fully framed with generous margin. No text, arrows, logos, borders, or extra figures."
+  }
+]

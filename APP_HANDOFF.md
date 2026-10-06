@@ -28,76 +28,74 @@ The main workflow is deliberately shallow:
 4. Daily Mobility contains the shared six-move routine, with images, doses, concise setup/focus/cues/avoid text, and one Done checkbox per move.
 5. Workout summarizes every exercise in programmed order before opening; expanding it shows all of that day's exercise cards and form images.
 6. Workout tracking means one checkbox per prescribed set, with no weight or rep entry fields. Ranges such as 2-3 sets show the third set as optional. Required-set progress excludes optional sets.
-7. The Saturday sled combination is four rounds, each with a 20 m push and 20 m backward drag, with one checkbox per round.
+7. The Saturday sled combination is four rounds, each with a 20 m push and 20 m backward drag, with one checkbox per round. Tuesday's sprint warmup has one completion check without invented drill volume; sprints have six effort checkboxes. Thursday's optional sled work contributes zero required checks. Friday's Cable Fly OR Ring Push-Up is one three-set slot, with both images and notes to choose one.
 8. Section open/closed state survives switching tabs or returning to that day within the current session. Completion marks persist locally across reloads.
 9. The selected day remains at the top of the day screen.
 
-## Current program (2026-10-03)
+## Current program (2026-10-06)
 
 The user supplied a new posture-first plan and authorized replacing the old plan. `PROGRAM` in `app.js` is canonical. Do not reintroduce older Wednesday workouts, forced flat-back coaching, or the former Friday circuit.
 
-### Monday: Upper Body - Chest + Scapular Control
+### Monday: Upper - Chest + Scapular Control
 
-1. Incline Dumbbell Press: 4 x 6-8
+1. Incline DB Press: 4 x 6-8
 2. Chest-Supported Row: 3 x 8-10
 3. Half-Kneeling Landmine Press: 3 x 8/side
 4. Push-Up Plus: 3 x 10-15
 5. Prone Y Raise: 3 x 10-15
 6. Suitcase Carry: 3 x 30-40 m/side
 
-### Tuesday: Lower Body - Pelvis + Posterior Chain
+### Tuesday: Athletic Conditioning + Trunk
 
-1. Front Squat: 4 x 6-8
+1. Sprint Warmup: 5 min easy movement; A-skips; high knees; leg swings; 2-3 progressive accelerations
+2. Sprints: 6 x 10-15 sec; 2-3 min rest between efforts
+3. Sled Push: 5 x 20 m
+4. Farmer Carry: 4 x 30-40 m
+5. Pallof Press: 3 x 10/side
+6. Side Plank: 3 x 30-45 sec/side
+
+### Thursday: Leg Day - Pelvis + Posterior Chain
+
+1. Trap-Bar Deadlift: 4 x 4-6
 2. Romanian Deadlift: 4 x 6-8
 3. Bulgarian Split Squat: 3 x 8/side
 4. Hip Thrust: 3 x 8-10
 5. Hamstring Curl: 3 x 10-15
-6. Dead Bug (Progressed): 3 x 6/side
-7. Side Plank: 3 x 30-45 sec/side
+6. Copenhagen Plank: 3 x 20-30 sec/side
+7. Sled Push - Optional: 3-4 x 20 m
 
-### Thursday: Upper Body - Rounded Shoulders + Head Position
+### Friday: Upper - Rounded Shoulders + Balanced Physique
 
-1. Low-Incline Dumbbell Press: 4 x 8-10
-2. One-Arm Cable Row With Reach: 3 x 10/side
+1. Low-Incline DB Press: 4 x 8-10
+2. One-Arm Cable Row with Reach: 3 x 10/side
 3. Half-Kneeling Landmine Press: 3 x 10/side
-4. Serratus Wall Slide: 3 x 10-12
-5. Prone Y Raise: 3 x 12
-6. Cable or Band External Rotation: 2-3 x 12-15
-7. Deep-Neck-Flexor Nod: 3 x 8 reps, 5-sec holds
-8. Front-Rack Carry: 3 x 20-30 m
+4. Cable/Band External Rotation: 3 x 12-15
+5. Cable Fly OR Ring Push-Up: 3 x 10-15
+6. Prone Y Raise: 2 x 12-15
+7. Front-Rack Carry: 3 x 20-30 m
 
-### Friday: Lower Body - Athletic Trunk + Pelvic Stability
+### Saturday: Integrated Athlete - Pelvic/Trunk Stability
 
-1. Trap-Bar Deadlift: 4 x 4-6
-2. Reverse Lunge: 3 x 8/leg
-3. Step-Up: 3 x 8/leg
-4. Single-Leg RDL: 3 x 8/leg
-5. Pallof Press: 3 x 10/side
-6. Copenhagen Plank: 2-3 x 20-30 sec/side
-7. Sled Push: 5-6 x 20 m
+1. Front Squat: 3 x 6-8
+2. Single-Leg RDL: 3 x 8/leg
+3. Reverse Lunge: 3 x 8/leg
+4. Bear Crawl: 4 x 15-20 m
+5. Sled Push + Backward Drag: 4 rounds: 20 m push + 20 m backward drag per round
+6. Farmer Carry: 3 x 30-40 m
+7. Zone 2: 20-30 min
 
-### Saturday: Integrated Posture + Athletic Movement
+## Daily Mobility
 
-1. Farmer Carry: 4 x 30-40 m
-2. Bear Crawl: 4 x 15-20 m
-3. Walking Lunges: 3 x 10/leg
-4. Push-Up Plus: 3 x 12-15
-5. Pull-Up: 3 x 6-10
-6. Sled Push + Backward Drag: 4 rounds x 20 m push + 20 m backward drag
-7. Zone 2 Cardio: 1 x 20-30 min
+1. 90/90 Wall Breathing: 2 x 5 breaths
+2. Dead Bug: 2 x 8-12/side
+3. Half-Kneeling Hip-Flexor Mobilization: 2 x 8-10/side
+4. Thoracic Extension Over Foam Roller: 2 x 6-8
+5. Serratus Wall Slide: 2 x 10-12
+6. Deep-Neck-Flexor Nod: 2 x 8-10 with 5-sec holds
 
-## Daily Mobility (8-10 minutes)
+All six drills have two sets. Neck holds are five seconds per repetition. Do not cap the routine's duration or duplicate these drills in Workout. Global cue: ribs over pelvis, neck tall, shoulders relaxed. Preserve a comfortable natural lumbar curve and natural scapular movement.
 
-1. 90/90 Wall Breathing: 2 sets x 5 slow breaths
-2. Dead Bug: 1 set x 6 reps/side
-3. Half-Kneeling Hip-Flexor Mobilization: 8 controlled reps/side
-4. Thoracic Extension Over Foam Roller: 6 controlled reps
-5. Serratus Wall Slide: 1 set x 10 reps
-6. Deep-Neck-Flexor Nod: 8 reps x about 5-sec hold
-
-The global cue is head over ribs, ribs over pelvis, weight through mid-foot. Keep a comfortable natural lumbar curve, relaxed shoulders, and natural shoulder-blade movement. Do not coach permanent pelvic tucking, forced lumbar flattening, or shoulders permanently pinned back/down.
-
-The workout footer contains the supplied progression guidance and 12-week phase outline. There is no separate daily cooldown feature.
+The workout footer contains progression, the 12-week phase outline, sprint recovery and concise safety guidance. Thursday is the primary leg day; Saturday is controlled, not maximal. No separate cooldown feature exists, so none was added.
 
 ## Architecture and important files
 
@@ -107,7 +105,7 @@ The workout footer contains the supplied progression guidance and 12-week phase 
 - `service-worker.js`: versioned offline app-shell cache and stale-while-revalidate asset handling.
 - `manifest.webmanifest`: installable PWA metadata.
 - `assets/mobility/`: original 16:9 instructional images, reused where appropriate.
-- `assets/workouts/`: workout reference images, including 18 new images for the October plan. `generation-prompts.json` records generation prompts; it is documentation, not an app dependency.
+- `assets/workouts/`: workout reference images, including the final-plan sprint warmup, sprints and cable fly. `generation-prompts.json` and `final-plan-generation-prompts.json` record generation prompts; it is documentation, not an app dependency.
 - `assets/icons/`: PWA and Apple touch icons.
 - `README.md`: short deployment and local-preview notes.
 - `.nojekyll`: prevents GitHub Pages/Jekyll processing.
@@ -128,11 +126,13 @@ exercise(id, title, sets, reps, sectionName, instructionSections)
 - `sectionName` retains the existing `note` field; current exercises use `"Workout"`.
 - `instructionSections` is an array of `[heading, bulletPoints]` pairs.
 
-The current plan uses ordinary exercise records, not the old superset/circuit shape. The sled combination has optional `setLabel: "Round"` to label its checklist correctly.
+The current plan uses ordinary exercise records, not the old superset/circuit shape. `dose` optionally overrides prescription display for warmup steps, sprint rest and cardio duration. `setLabel` supports Round, Sprint, Warmup and Session. `optional: true` excludes the whole exercise from required completion. `imageLabels` names each image when multiple movements or alternatives share a slot.
+
+Stable movement IDs are preserved even when their historic day suffix no longer matches the schedule. The day/date log key keeps assignments separate. Never remap old logs to different movements or rewrite historical records.
 
 ### Images
 
-Every workout exercise maps its stable ID in `EXERCISE_IMAGES` to a local image under `assets/workouts/` or a reused mobility image. Values are strings, except the Saturday sled combination uses an array of two paths to show both movements. Images use lazy loading and fixed dimensions.
+Every workout exercise maps its stable ID in `EXERCISE_IMAGES` to a local image under `assets/workouts/` or a reused mobility image. Values are strings, except the Saturday sled combination and Friday chest choice use arrays of two paths. Images use lazy loading and fixed dimensions.
 
 New exercise images should match the existing native style:
 
@@ -237,7 +237,7 @@ Also verify an unaffected mobility card and the Body Weight tab when changes cou
 
 ## Latest verification
 
-The October update was checked against the supplied exercise order and prescriptions, including all 35 workout records, 6 mobility doses, image existence and cache inclusion, and required/optional set counts. Browser checks cover all days, collapse/reopen, tab switching, checkbox persistence, preservation of historical local data, body-weight saving, offline reload/image loading, and 320/390/1440 px layouts. Re-test relevant flows after future changes; this note is not a substitute for fresh validation.
+The October update was checked against the supplied exercise order and prescriptions, including all 33 workout records, 6 two-set mobility doses, image existence and cache inclusion, and required/optional set counts. `node --test tests/program.test.cjs` checks final-plan content and offline image coverage. Browser checks cover all days, collapse/reopen, tab switching, checkbox persistence, preservation of historical local data, body-weight saving, offline reload/image loading, and 320/390/1440 px layouts. Re-test relevant flows after future changes; this note is not a substitute for fresh validation.
 
 ## Commit and deployment
 

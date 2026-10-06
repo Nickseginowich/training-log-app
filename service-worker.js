@@ -1,4 +1,4 @@
-const CACHE_VERSION = "2026-10-03-posture-first";
+const CACHE_VERSION = "2026-10-06-final-plan";
 const CACHE_NAME = `training-log-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
@@ -42,7 +42,11 @@ const APP_SHELL = [
   "./assets/workouts/walking-lunge.png",
   "./assets/workouts/pull-up.png",
   "./assets/workouts/zone-2-cardio.png",
-  "./assets/workouts/backward-sled-drag.png"
+  "./assets/workouts/backward-sled-drag.png",
+  "./assets/workouts/cable-fly.png",
+  "./assets/workouts/ring-pushup.png",
+  "./assets/workouts/sprint-warmup.png",
+  "./assets/workouts/sprints.png"
 ];
 
 self.addEventListener("install", (event) => {
